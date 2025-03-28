@@ -152,14 +152,14 @@ body {
     height: 24px;
     cursor: pointer;
     position: absolute;
-    right: 2px; /* Moves to right side */
+    right: 1px; /* Moves to right side */
     top: 50%;
     transform: translateY(-50%);
 }
 
 .custom-menu .line {
     background-color: #3e0078;
-    height: 4px;
+    height: 2px;
     border-radius: 2px;
     transition: all 0.3s ease;
 }
@@ -232,13 +232,13 @@ body {
 
 
     /* Menu Active State */
-    .navbar ul.show-menu {
+.navbar ul.show-menu {
         display: flex;
         opacity: 1;
         visibility: visible;
-    }
+}
 
-/* Main Content */
+
 /* Masterclass Section Styling */
 .masterclass {
     display: flex;
@@ -688,6 +688,78 @@ p {
         font-size: 24px;
     }
 }
+
+/* Hide the alternative views by default */
+.mobile-view {
+    display: none;
+}
+
+/* Tablet & Mobile Styles */
+@media (max-width: 1023px) {
+    .enrollment-process {
+        display: none;
+    }
+
+    .mobile-view {
+        display: block;
+        padding: 40px 20px;
+    }
+
+    .vertical-process {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+    }
+
+    .step {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        max-width: 350px;
+        text-align: left;
+    }
+
+    .circle {
+        width: 40px;
+        height: 40px;
+        background-color: #3e0078;
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+    }
+
+    .vertical-line {
+        width: 2px;
+        height: 40px;
+        position: relative;
+    }
+    /* Add the downward arrow */
+    .vertical-line::after {
+        content: '\2193'; /* Downward Arrow */
+        font-size: 40px;
+        color: #3e0078;
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    h3 {
+        color: #3e0078;
+    }
+
+    p {
+        font-size: 14px;
+        color: #555;
+    }
+    
+}
+
 /* Process code end */
 
 
@@ -1010,8 +1082,8 @@ p {
 /* Ensuring 2 cards per row on medium screens */
 @media (max-width: 1023px) and (min-width: 768px) {
     .mentor-card {
-        flex: 1 1 calc(50% - 20px); /* 2 cards in one row */
-        max-width: calc(50% - 20px);
+        flex: 1 1 calc(50% - 30px); /* 2 cards in one row */
+        max-width: calc(50% - 30px);
     }
 }
 
@@ -1019,7 +1091,10 @@ p {
 @media (max-width: 767px) {
     .mentor-card {
         flex: 1 1 80%;
-        max-width: 85%;
+        max-width: 80%;
+    }
+    .mentor-container{
+        max-width: 450px;
     }
 }
 
@@ -1120,272 +1195,234 @@ p {
 .mentor-card.flipped .card-inner {
     transform: rotateY(180deg);
 }
-
-/* pricing */
-
-/* Pricing Section */
-.unique-pricing-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 50px;
-    background: #3E0078;
-    color: white;
-    gap: 20px;
-}
-
-.unique-process-container h3{
-    margin-bottom: 28px;
-}
-
-.unique-pricing-container {
-    max-width: 400px;
+/* Pricing Section Styles */
+.pricing-section {
+    width: 100%;
+    max-width: 1200px;
     padding: 20px;
-}
-/* Heading Styling */
-.unique-pricing-container h4 {
-    font-size: 18px;
-    font-weight: bold;
-    color: #ff9800;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-/* Main Title */
-.unique-pricing-container h2 {
-    font-size: 24px;
-    font-weight: 700;
-    margin-bottom: 10px;
-    color: #ffffff;
-}
-
-
-/* Discount Text */
-.discount {
-    font-size: 16px;
-    font-weight: bold;
-    color: #ff5722;
+    margin: 50px auto 0; /* Ensures spacing from the cards above */
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 5px;
-}
-/* Star Animation */
-.discount::after {
-    content: "⭐";
-    display: inline-block;
-    font-size: 18px;
-    animation: vibrate 0.3s infinite alternate;
 }
 
-/* Vibration Animation */
-@keyframes vibrate {
-    0% { transform: translateX(-2px); }
-    100% { transform: translateX(2px); }
-}
-/* Price Box Styling */
-.unique-price-box {
-    background: #ffffff;
-    color: #3e0078;
-    padding: 15px;
-    border-radius: 10px;
-    margin-top: 15px;
-    text-align: center;
-}
-
-.unique-enroll-btn {
-    background: orange;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-}
-
-/* Process Container */
-.unique-process-container {
-    max-width: 600px;
-    padding: 20px;
-    background: white;
-    color: black;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    position: relative;
-}
-
-/* Price Styling */
-.unique-price-box h3 {
+/* Heading for Pricing Section */
+.pricing-heading {
     font-size: 28px;
     font-weight: bold;
-    margin: 10px 0;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #3e0078; /* Brand Color */
 }
 
-/* Total Amount Styling */
-.unique-price-box p {
-    font-size: 14px;
-    margin: 5px 0;
-}
-
-/* Strikethrough Price */
-.unique-price-box del {
-    color: #e7b3b2;
-    font-size: 14px;
-}
-
-/* Discounted Price */
-.unique-price-box strong {
-    font-size: 18px;
-    font-weight: bold;
-    color: #4caf50;
-}
-
-/* Learn More Link */
-.unique-pricing-container a {
-    color: #ff9800;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-.unique-pricing-container a:hover {
-    text-decoration: underline;
-}
-
-/* Enroll Button */
-.unique-enroll-btn {
-    background: #ff9800;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 6px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    margin-top: 15px;
-    transition: background 0.3s;
-    margin-left: 35%;
-}
-
-.unique-enroll-btn:hover {
-    background: #e68900;
-}
-
-/* Process Steps */
-.unique-process-steps {
+/* Pricing Container */
+.pricing-container {
     display: flex;
-    position: relative;
-    justify-content: space-between;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
     align-items: center;
     width: 100%;
-    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
-.unique-process-steps img{
-    padding-top: 10%;
-    margin-top: 20px;
-}
-
-/* Animated Line */
-.unique-line {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 0%;
-    height: 4px;
-    background: #3e0078;
-    transition: width 2s linear;
-}
-
-/* Green dashed line for last step */
-.unique-line.green-dash {
-    border-top: 4px dashed rgb(4, 52, 4);
-    background: none;
-}
-
-/* Step Design */
-.unique-step {
+/* Individual Plan Card */
+.plan {
+    flex: 1;
+    min-width: 280px;
+    max-width: 320px;
     text-align: center;
-    width: 120px;
+    padding: 20px;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
     position: relative;
 }
 
-/* Small dots on each step */
-.unique-step::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 12px;
-    height: 12px;
-    background: white;
-    border: 2px solid #3e0078;
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-    opacity: 0; /* Initially hidden */
-    transition: opacity 0.3s ease-in-out;
-    margin-top: 2%;
+/* Plan Headings */
+.plan h3 {
+    margin: 0;
+    padding: 10px;
+    font-size: 20px;
 }
 
-.unique-step.active::before {
-    opacity: 1; /* Show when line reaches */
-    background: #3e0078;
-}
-
-/* Green dot for last step */
-.unique-step.final::before {
-    border-color: green;
-    background: green;
-}
-
-.unique-step img {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    position: absolute;
-    top: -70px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.unique-step h5 {
-    margin-top: 35px;
-}
-.unique-step p{
-    margin-top: 35px;
+/* Plan Description */
+.plan p {
     font-size: 14px;
+    color: #555;
 }
 
-/* Pricing Meida query */
+/* Price Display */
+.plan .price {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #3e0078;
+}
+
+/* Get Started Button */
+.plan button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: #171732;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Features List */
+.features {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+    text-align: left; /* Aligns text to the left */
+}
+.features li {
+    padding: 5px;
+    font-size: 14px;
+    display: flex;
+    align-items: center; /* Ensures checkmark aligns with text */
+    gap: 8px; /* Adds spacing between checkmark and text */
+}
+.features li::before {
+    content: "✔"; /* Unicode checkmark */
+    color: #28a745; /* Green color for checkmark */
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* Plan Icons */
+.icon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 20px;
+}
+
+/* Plan-Specific Colors */
+.free { border-top: 5px solid #08c3bd; background: linear-gradient(to bottom, #b2dee1, white); }
+.lite { border-top: 5px solid #7d5bbe; background: linear-gradient(to bottom, #ece9f7, white); }
+.pro { border-top: 5px solid #f0932b; background: linear-gradient(to bottom, #fce3c2, white); }
+
+/* Responsive Design Fixes */
+@media (max-width: 1024px) {
+    .pricing-section {
+        margin-top: 80px; /* More space for tablets */
+    }
+    .pricing-container {
+        justify-content: center;
+    }
+    .plan {
+        flex: none;
+        width: 45%;
+    }
+}
 
 @media (max-width: 768px) {
-    .unique-pricing-section {
-        flex-direction: column; /* Stack elements vertically */
+    .pricing-section {
+        margin-top: 100px; /* More space for smaller screens */
+    }
+    .pricing-container {
+        flex-direction: column;
         align-items: center;
-        padding: 30px;
     }
-
-    .unique-pricing-container {
-        max-width: 100%;
-        text-align: center;
-    }
-
-    .unique-price-box {
-        margin: 0 auto;
-        width: 80%;
-    }
-
-    .unique-enroll-btn {
-        width: 80%;
-        margin: 15px auto 0;
-        display: block;
+    .plan {
+        width: 90%;
     }
 }
 
-@media (max-width: 768px) {
-    .unique-process-container {
-        display: none; /* Hide process container on mobile */
-    }
+/* Ensuring Cards Above Have Enough Space */
+.cards-container {
+    min-height: 250px; /* Prevents content collapse */
+    margin-bottom: 60px; /* Ensures gap between cards and pricing section */
 }
+/* Availability Badge - Top Right Corner */
+.availability {
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    background: linear-gradient(45deg, #ff4d4d, #ff7b7b);
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 20px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+    transform: rotate(10deg);
+    animation: pulse 1.5s infinite alternate;
+}
+/* Subtle Pulsing Effect */
+@keyframes pulse {
+    from { transform: scale(1) rotate(10deg); }
+    to { transform: scale(1.1) rotate(10deg); }
+}
+/* Availability Badge - Top Right Corner */
+.Scholarship {
+    position: absolute;
+    top: 10px;
+    right: 16px;
+    background: linear-gradient(45deg, #cee91e, #ff7b7b);
+    color: #0b0000;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 6px 6px;
+    border-radius: 20px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+    transform: rotate(10deg);
+    animation: pulse 2s infinite alternate;
+}
+/* Subtle Pulsing Effect */
+@keyframes pulse {
+    from { transform: scale(1) rotate(10deg); }
+    to { transform: scale(1.1) rotate(10deg); }
+}
+
 
 html {
     scroll-behavior: smooth;
 }
 
+/* Scholarship Popup */
+/* Scholarship Modal Popup */
+.scholarship-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    position: relative;
+    background: white;
+    width: 80%;
+    max-width: 600px;
+    height: 80%;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.modal-content iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #333;
+    font-weight: bold;
+}

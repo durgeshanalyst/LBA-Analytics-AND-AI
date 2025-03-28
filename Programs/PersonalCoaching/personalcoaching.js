@@ -201,3 +201,41 @@ document.addEventListener("DOMContentLoaded", function () {
 
     setTimeout(animateStep, 500);
 });
+
+// Scholarship popup
+
+document.addEventListener("DOMContentLoaded", function () {
+    const scholarshipLinks = document.querySelectorAll(".scholarships");
+
+    scholarshipLinks.forEach(link => {
+        link.addEventListener("click", function (event) {
+            event.preventDefault();
+
+            // Create a modal container
+            const modal = document.createElement("div");
+            modal.classList.add("scholarship-modal");
+
+            // Create modal content with an iframe to load the scholarship page
+            modal.innerHTML = `
+                <div class="modal-content">
+                    <span class="close-btn">&times;</span>
+                    <iframe src="scholarship.html" frameborder="0"></iframe>
+                </div>
+            `;
+
+            document.body.appendChild(modal);
+
+            // Close modal on button click
+            modal.querySelector(".close-btn").addEventListener("click", function () {
+                modal.remove();
+            });
+
+            // Close modal when clicking outside content
+            modal.addEventListener("click", function (event) {
+                if (event.target === modal) {
+                    modal.remove();
+                }
+            });
+        });
+    });
+});

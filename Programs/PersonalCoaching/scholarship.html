@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scholarship Page - Letsbeanalyst</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        header {
+            background-color: #3e0078;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 40px;
+        }
+        header p {
+            font-size: 20px;
+            margin-top: 10px;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        .scholarship-info, .how-to-apply, .updates, .apply-form {
+            background-color: white;
+            margin: 20px 0;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #3e0078;
+            font-size: 28px;
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        ul li {
+            font-size: 18px;
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+        .scholarship-info img {
+            width: 100%;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        .how-to-apply img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        .apply-form input, .apply-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        .apply-form button {
+            background-color: #3e0078;
+            color: white;
+            padding: 15px;
+            font-size: 18px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .apply-form button:hover {
+            background-color: #2c0062;
+        }
+        .updates ul {
+            padding-left: 0;
+        }
+        .updates ul li {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        .updates ul li strong {
+            color: #3e0078;
+        }
+        footer {
+            background-color: #3e0078;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        footer p {
+            margin: 0;
+        }
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <img src="/asset/goal.avif" alt="Letsbeanalyst Logo">
+            <h1>Letsbeanalyst Scholarship Program</h1>
+            <p>Apply Now and Get 50% Fee Back!</p>
+        </div>
+    </header>
+
+    <section class="scholarship-info">
+        <div class="container">
+            <h2>Scholarship Details</h2>
+            <p>Our scholarship program aims to support talented and motivated individuals who want to pursue a career in data analytics. We offer a 50% fee-back scholarship to a select number of students each year.</p>
+            <img src="" alt="Scholarship Banner">
+            <ul>
+                <li>50% Fee Back on Tuition Fees</li>
+                <li>Open for all aspiring data analysts</li>
+                <li>Eligible for students from tier-2 and tier-3 colleges</li>
+                <li>Limited seats available</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="how-to-apply">
+        <div class="container">
+            <h2>How to Apply</h2>
+            <p>Follow these steps to apply for the scholarship:</p>
+            <ol>
+                <li>Fill out the scholarship application form below</li>
+                <li>Submit your academic credentials</li>
+                <li>Complete the online assessment</li>
+                <li>Wait for our notification on your eligibility</li>
+            </ol>
+            <img src="https://via.placeholder.com/800x400.png?text=Application+Steps" alt="Application Steps">
+        </div>
+    </section>
+
+    <section class="updates">
+        <div class="container">
+            <h2>Latest Updates</h2>
+            <ul id="updates-list">
+                <li>Scholarship Application Deadline: <strong>April 30, 2025</strong></li>
+                <li>Results will be announced on: <strong>May 10, 2025</strong></li>
+                <li>Next scholarship cycle begins on: <strong>June 2025</strong></li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="apply-form">
+        <div class="container">
+            <h2>Apply for Scholarship</h2>
+            <form id="scholarship-form">
+                <input type="text" id="name" name="name" placeholder="Full Name" required>
+                <input type="email" id="email" name="email" placeholder="Email Address" required>
+                <input type="text" id="college" name="college" placeholder="Your College Name" required>
+                <textarea id="message" name="message" rows="4" placeholder="Why do you deserve this scholarship?" required></textarea>
+                <button type="submit">Submit Application</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Letsbeanalyst | <a href="mailto:info@letsbeanalyst.com">Contact Us</a></p>
+    </footer>
+
+    <script>
+        document.getElementById("scholarship-form").addEventListener("submit", function(e) {
+            e.preventDefault();
+            alert("Thank you for applying! We will get back to you soon.");
+            document.getElementById("scholarship-form").reset();
+        });
+
+        // Example of updating the page with new scholarship info dynamically (JavaScript)
+        const updatesList = document.getElementById("updates-list");
+        const newUpdate = document.createElement("li");
+        newUpdate.innerHTML = "New scholarship cycle begins on: <strong>July 2025</strong>";
+        updatesList.appendChild(newUpdate);
+    </script>
+
+</body>
+</html>
