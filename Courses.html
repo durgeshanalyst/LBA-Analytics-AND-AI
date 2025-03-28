@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LetsBeAnalyst</title>
+    <link rel="stylesheet" href="courses.css">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+
+<div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <button class="tab-button active" onclick="switchTab('careerTracks', this)">
+            Personal Coaching<span class="arrow-icon"><i class="fas fa-chevron-right"></i></span>
+        </button>
+        <button class="tab-button" onclick="switchTab('courses', this)">
+            Courses <span class="arrow-icon"><i class="fas fa-chevron-right"></i></span>
+        </button>
+        <button class="tab-button" onclick="switchTab('Job Support', this)">
+            Job Support <span class="arrow-icon"><i class="fas fa-chevron-right"></i></span>
+        </button>
+        <button class="tab-button" onclick="switchTab('Free Training', this)">
+            Free Training <span class="arrow-icon"><i class="fas fa-chevron-right"></i></span>
+        </button>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content">
+        <!-- Career Tracks Section -->
+        <div id="careerTracks" class="tab-content active">
+            <div class="feature-container">
+                <div class="feature">
+                    <i class="fas fa-user-friends"></i>
+                    <span>1:1 Career Mentorship</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Assignment & Projects</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-route"></i>
+                    <span>Career Guidance</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-briefcase"></i>
+                    <span>Placement</span>
+                </div>
+            </div>
+            
+            <div class="courses-grid">
+                <div class="course-card">
+                    <img src="asset/1to1.png" alt="1:1 Mentorship">
+                    <div class="course-info">
+                        <h3>1:1 Mentorship</h3>
+                        <p>Learn Python programming fundamentals to analyze and visualize data.</p>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <img src="/asset/strong your weakness.png" alt="Strong your weak">
+                    <div class="course-info">
+                        <h3>Strong your weak</h3>
+                        <p>Learn the weakest skills and make people wonder at your workplace.</p>
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <img src="/asset/Top1.png" alt="Top 1%">
+                    <div class="course-info">
+                        <h3>Learn from Top1%</h3>
+                        <p>Find your mentor who work in Top Notch Product based Company</p>
+                    </div>
+                </div>
+            </div>
+
+            <button class="explore-btn">Explore more career tracks <i class="fas fa-chevron-right"></i></button>
+        </div>
+
+        <!-- Courses Section -->
+        <div id="courses" class="tab-content">
+             <div class="feature-container">
+                <div class="feature">
+                    <i class="fas fa-user-graduate"></i>
+                    <span>Expert-Led Courses</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Real-World Projects</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-tasks"></i>
+                    <span>Evaluation</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-briefcase"></i>
+                    <span>Placement</span>
+                </div>
+            </div>
+            
+            <div class="courses-grid">
+                <a href="Programs/Courses/EndtoEndDataAnalytics.html" target="_blank">
+                <div class="course-card">
+                    <img src="asset/DA1.png" alt="Data Analytics">
+                    <div class="course-info">
+                        <h3>End to End Data Analytics</h3>
+                        <p>Master Data Analytics in 6 Month with 1000+ Hours of practical Learning.</p>
+                    </div>
+                </div>
+            </a>
+                <div class="course-card">
+                    <img src="asset/Da2.png" alt="Data Engineering">
+                    <div class="course-info">
+                        <h3>Weekend : Data Analytics Batch</h3>
+                        <p>Best course for career transition for working Professional.</p>
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <img src="asset/Projectbasedlearning.png" alt="Projectbasedlearning">
+                    <div class="course-info">
+                        <h3>Project based Learning</h3>
+                        <p>1 Month Group session for Portfolio Project.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="explore-btn">Explore more courses <i class="fas fa-chevron-right"></i></button>
+        </div>
+        <!-- Job Support -->
+       <div id="Job Support" class="tab-content">
+        <div class="feature-container">
+           <div class="feature">
+               <i class="fas fa-file-alt"></i>
+               <span>Resume Drafting</span>
+           </div>
+           <div class="feature">
+               <i class="fas fa-user-cog"></i>
+               <span>Naukri Building</span>
+           </div>
+           <div class="feature">
+               <i class="fas fa-folder-open"></i>
+               <span>Portfolio</span>
+           </div>
+           <div class="feature">
+               <i class="fas fa-search"></i>
+               <span>Job Hunting</span>
+           </div>
+       </div>
+       
+       <div class="courses-grid">
+           <div class="course-card">
+               <img src="asset/Resume Building.png" alt="Resume Building">
+               <div class="course-info">
+                   <h3>Resume Review or ATS Resume building</h3>
+                   <p>Get review your resume from industry expert of your dream company.</p>
+               </div>
+           </div>
+           <div class="course-card">
+               <img src="asset/interview.png" alt="Interview">
+               <div class="course-info">
+                   <h3>Mock Interview</h3>
+                   <p>Get real world experience of 4 round mock inetrview.</p>
+               </div>
+           </div>
+           <div class="course-card">
+               <img src="asset/Career CAtalyst.png" alt="Career CAtalyst">
+               <div class="course-info">
+                   <h3>Career Catalyst</h3>
+                   <p>Last time placement Support</p>
+               </div>
+           </div>
+       </div>
+       <button class="explore-btn">Explore more courses <i class="fas fa-chevron-right"></i></button>
+   </div>
+   <div id="Free Training" class="tab-content">
+    <div class="feature-container">
+       <div class="feature">
+           <i class="fas fa-users"></i>
+           <span>Participate</span>
+       </div>
+       <div class="feature">
+           <i class="fas fa-laptop-code"></i>
+           <span>Work</span>
+       </div>
+       <div class="feature">
+           <i class="fas fa-paper-plane"></i>
+           <span>Submit</span>
+       </div>
+       <div class="feature">
+           <i class="fas fa-award"></i>
+           <span>Certificate</span>
+       </div>
+   </div>
+   
+   <div class="courses-grid">
+       <div class="course-card">
+           <img src="asset/live-webinar.png" alt="live-webinar">
+           <div class="course-info">
+               <h3>Webinar</h3>
+               <p>Get participation certificate and increase visibility to the recruiters.</p>
+           </div>
+       </div>
+       <div class="course-card">
+           <img src="asset/Bootcamp.png" alt="Bootcamp">
+           <div class="course-info">
+               <h3>Bootcamp</h3>
+               <p>Get 3 Hours Training with certificate on Most demanded Topics.</p>
+           </div>
+       </div>
+
+       <div class="course-card">
+           <img src="asset/Marathon.png" alt="Marathon">
+           <div class="course-info">
+               <h3>Marathon</h3>
+               <p>Participate and get certificate by working on a Industry based Datasets.</p>
+           </div>
+       </div>
+   </div>
+   <button class="explore-btn">Explore more courses <i class="fas fa-chevron-right"></i></button>
+</div>
+    </main>
+</div>
+</body>
+</html>

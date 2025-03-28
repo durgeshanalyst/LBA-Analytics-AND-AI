@@ -1,0 +1,354 @@
+/* ---- DEFAULT NAVIGATION ---- */
+.nav-container {
+    display: flex;
+    justify-content: center;
+}
+
+.hamburger {
+    display: none; /* Hide by default */
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 10px;
+}
+
+/* ---- MOBILE VIEW (0px - 767px) ---- */
+@media (max-width: 768px) {
+    .nav-container {
+        position: relative;
+        width: 100%;
+    }
+
+    .hamburger {
+        display: block; /* Show on mobile */
+    }
+
+    nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: white;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        transform: translateY(-100%);
+        transition: transform 0.3s ease-in-out;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    nav.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 20px 0;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+        background: none;
+        display: none;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    #nav-enroll {
+        display: none;
+    }
+}
+@media (max-width: 1024px) {  /* Tablets and smaller */
+    .dropdown {
+        display: none !important;
+    }
+}
+
+/*Header text and logo
+Phone: top/botton*/
+/* Tablet View (Below 1024px) */
+@media (max-width: 1024px) {
+    .hero {
+        flex-direction: column; /* Stack content & image */
+        padding: 80px 50px 30px;
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 100%; /* Full width */
+        text-align: center;
+    }
+
+    .hero-image {
+        margin-top: 20px;
+    }
+
+    .hero-image img {
+        width: 80%; /* Reduce image size */
+    }
+}
+
+/* Mobile View (Below 768px) */
+@media (max-width: 768px) {
+    .hero {
+        padding: 60px 20px 30px;
+    }
+
+    h1 {
+        font-size: 32px; /* Smaller heading */
+    }
+
+    .subtext {
+        font-size: 16px;
+        margin: 15px 0;
+    }
+
+    .hero-image img {
+        width: 90%; /* Further reduce image */
+    }
+
+    /* Adjust Floating Badges */
+    .badge {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+
+    .mentor { top: 85%; left: 10px; }
+    .live-classes { top: 80%; left: 80px; }
+    .internship { top: 75%; left: 150px; }
+    .returnship { top: 70%; left: 220px; }
+    .career-support { top: 65%; left: 280px; }
+}
+
+/* Small Mobile View (Below 480px) */
+@media (max-width: 480px) {
+    .hero {
+        padding: 50px 15px 20px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .subtext {
+        font-size: 14px;
+    }
+
+    .hero-image img {
+        width: 100%; /* Full width */
+    }
+
+    /* Adjust Floating Badges for small screens */
+    .badge {
+        font-size: 10px;
+        padding: 5px 8px;
+    }
+
+    .mentor { top: 82%; left: 5px; }
+    .live-classes { top: 77%; left: 60px; }
+    .internship { top: 72%; left: 120px; }
+    .returnship { top: 67%; left: 180px; }
+    .career-support { top: 62%; left: 240px; }
+}
+
+/* 🚀 Hide Phone Roadmap on Large Screens */
+@media (min-width: 1024px) {
+    .roadmap-container-phone {
+        display: none !important;
+    }
+}
+
+/* 🚀 Hide Large Screen Roadmap on Phones & Tablets */
+@media (max-width: 1023px) {
+    .roadmap-container {
+        display: none !important;
+    }
+}
+
+/* 📱 Show Roadmap Only on Small Screens (Phones & Tablets) */
+@media (max-width: 1023px) {
+    .roadmap-container-phone {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .ladder {
+        position: relative;
+        width: 100%;
+        max-width: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px; /* Add consistent spacing */
+    }
+
+    .ladder::before {
+        content: '';
+        position: absolute;
+        width: 6px;
+        height: 100%;
+        background: #dbdbdb; /* Make it visible */
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 3px;
+        z-index: -1; /* Make sure it is behind icons */
+    }
+
+    .step {
+        position: relative;
+        background: rgba(255, 255, 255, 0.2);
+        border: none; /* Remove border */
+        padding: 10px 15px;
+        width: auto;
+        text-align: center;
+        font-weight: bold;
+        color: #000; /* Ensure visibility */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        transition: 0.3s ease-in-out;
+    }
+
+    .step i {
+        font-size: 32px;
+        padding: 8px;
+        border-radius: 5px;
+    }
+
+    .step span {
+        font-size: 16px;
+        font-weight: bold;
+        color: #746d6d; /* Improve readability */
+    }
+
+    .goal {
+        background: #20c997;
+        color: white;
+        padding: 15px 30px;
+        border-radius: 50px;
+        font-size: 18px;
+        font-weight: bold;
+        position: relative;
+        text-align: center;
+        animation: glow 1.5s infinite alternate;
+    }
+
+    @keyframes glow {
+        0% { box-shadow: 0px 0px 10px rgba(32, 201, 151, 0.4); }
+        100% { box-shadow: 0px 0px 20px rgba(32, 201, 151, 0.8); }
+    }
+}
+
+
+/* course navigation media query */
+
+/* For mobile screens (width up to 767px) */
+@media screen and (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .tab-button {
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .content {
+        padding: 15px;
+    }
+
+    .feature-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .courses-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .course-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .course-card img {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 10px;
+    }
+
+    .explore-btn {
+        width: 100%;
+        text-align: center;
+        margin: 20px 0;
+    }
+}
+
+/* Custom Hamburger Menu */
+.custom-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 24px;
+    cursor: pointer;
+    position: absolute;
+    right: 2px; /* Moves to right side */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.custom-menu .line {
+    background-color: #3e0078;
+    height: 4px;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Custom Menu Line Variations */
+.short { width: 15px; }
+.long { width: 25px; }
+.medium { width: 30px; }
+.longest { width: 25px; }
+
+/* Responsive Design for Mobile */
+@media screen and (max-width: 1023px) {
+    .navbar {
+        padding: 10px 15px;
+    }
+
+    /* Show custom hamburger menu only on mobile */
+    .custom-menu {
+        display: flex;
+        order: 1;
+    }
+
+    /* Hide default menu icon */
+    .menu-icon {
+        display: none;
+    }

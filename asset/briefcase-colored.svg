@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27">
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="a">
+            <stop stop-color="#E1CDFF" offset="0%"/>
+            <stop stop-color="#FFF" offset="100%"/>
+        </linearGradient>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+            <path stroke="#520FB7" d="M13.348 19.825v-3.338"/>
+            <path d="M20.316 3.395a4.015 4.015 0 0 1 4.013 4.026v4.527c-3.237 1.894-7.513 3.04-12.171 3.04-4.658 0-8.921-1.146-12.158-3.04v-4.54a4.015 4.015 0 0 1 4.026-4.013h16.29z" stroke="#520FB7" fill-opacity=".6" fill="url(#a)" transform="translate(1.183 1.5)"/>
+            <path d="M17.953 4.89v-.482A2.909 2.909 0 0 0 15.045 1.5H11.65a2.909 2.909 0 0 0-2.907 2.908v.481" stroke="#520FB7"/>
+            <path d="m1.215 18.254.25 3.301A4.266 4.266 0 0 0 5.716 25.5h15.261c2.23 0 4.085-1.72 4.253-3.945l.249-3.301" stroke="#F70"/>
+        </g>
+        <path d="M.307.667h26v26h-26z"/>
+    </g>
+</svg>

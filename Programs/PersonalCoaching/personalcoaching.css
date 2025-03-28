@@ -1,0 +1,1391 @@
+/* General Styles */
+body {
+    font-family: 'Manrope', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f7fa;
+    color: #333;
+    padding-top: 70px;
+}
+
+
+/* Default Logo Styles */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: purple;
+}
+
+.navbar a {
+    text-decoration: none; /* Removes underline */
+}
+
+.logo div {
+    width: 60px;
+    aspect-ratio: 1;
+    display: grid;
+    place-content: center;
+    font-size: 1.5rem;
+    color: #fff;
+    background-color: #3e0078;
+    border-radius: 50%;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 1023px) {  /* Tablet */
+    .logo {
+        font-size: 1.3rem;  /* Reduce text size */
+    }
+
+    .logo div {
+        width: 50px;  /* Smaller logo */
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 768px) {  /* Mobile */
+    .logo {
+        font-size: 1.1rem;  /* Even smaller text */
+    }
+
+    .logo div {
+        width: 40px;  /* Even smaller logo */
+        font-size: 1rem;
+    }
+}
+
+/* Hide "Try Masterclass" on Tablet & Mobile */
+@media screen and (max-width: 1023px) {  /* Tablet & Mobile */
+    .nav-buttons .btn.primary {
+        display: none !important;
+    }
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 15px 40px;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
+
+/* Navigation Menu - Desktop */
+.navbar ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #6200ea;
+}
+
+/* Navbar Buttons */
+.nav-buttons {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-right: 10%;
+}
+
+.nav-buttons .btn {
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    background-color: #3e0078;
+}
+
+.btn.primary {
+    background-color: #6200ea;
+    color: white;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+/* Default Hamburger Menu (Hidden on Large Screens) */
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+}
+
+/* Custom Hamburger Menu */
+.custom-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 24px;
+    cursor: pointer;
+    position: absolute;
+    right: 2px; /* Moves to right side */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.custom-menu .line {
+    background-color: #3e0078;
+    height: 4px;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Custom Menu Line Variations */
+.short { width: 15px; }
+.long { width: 25px; }
+.medium { width: 30px; }
+.longest { width: 25px; }
+
+/* Responsive Design for Mobile */
+@media screen and (max-width: 1023px) {
+    .navbar {
+        padding: 10px 15px;
+    }
+
+    /* Show custom hamburger menu only on mobile */
+    .custom-menu {
+        display: flex;
+        order: 1;
+    }
+
+    /* Hide default menu icon */
+    .menu-icon {
+        display: none;
+    }
+
+    .nav-buttons {
+        max-width: calc(100% - 50px);
+        justify-content: flex-end;
+        flex-shrink: 1;
+    }
+
+    .nav-buttons .btn {
+        font-size: 12px;
+        padding: 5px 8px;
+        max-width: 120px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    /* Mobile Navigation Menu */
+    .navbar ul {
+        display: none; /* Initially hidden */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        padding: 15px 0;
+        text-align: center;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    }
+
+    .navbar ul li {
+        margin: 8px 0;
+    }
+
+    /* Show menu when toggled */
+    .navbar ul.show-menu {
+        display: flex;
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+
+    /* Menu Active State */
+    .navbar ul.show-menu {
+        display: flex;
+        opacity: 1;
+        visibility: visible;
+    }
+
+/* Main Content */
+/* Masterclass Section Styling */
+.masterclass {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.masterclass-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    flex-wrap: nowrap; /* Ensure elements stay in a line */
+}
+
+/* Image Styling */
+.masterclass-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.masterclass-image img {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%; /* Circular Image */
+    object-fit: cover;
+    border: 4px solid #3e0078; /* Brand color */
+}
+
+.mentor-name, .mentee-name {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #3e0078;
+}
+
+/* Connection Line and Text */
+.connection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+/* Keyframe Animation for Smooth Continuous Flowing Line */
+@keyframes flowLine {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 100px 0; /* Adjusted for smoothness */
+    }
+}
+
+.connection-line {
+    width: 280px;
+    height: 2px;
+    background: repeating-linear-gradient(to right, 
+        #3e0078 0%, #3e0078 50%, transparent 50%, transparent 100%);
+    background-size: 20px 2px; /* Adjusted for seamless animation */
+    position: relative;
+    
+    /* Apply Smooth Infinite Flow Animation */
+    animation: flowLine 2s linear infinite;
+}
+
+.connection-text {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: -20px;
+}
+
+.top {
+    font-size: 20px;
+    font-weight: bold;
+    color: #3e0078;
+    position: absolute;
+    top: -30px;
+}
+
+.bottom {
+    font-size: 16px;
+    color: #3e0078;
+    font-weight: bold;
+    position: absolute;
+    bottom: -60px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .masterclass-image img {
+        width: 250px;
+        height: 250px;
+    }
+    .connection-line {
+        width: 250px;
+        animation: flowLine 2s linear infinite;
+    }
+}
+
+@media (max-width: 768px) {
+    .masterclass-image img {
+        width: 180px;
+        height: 180px;
+    }
+    .connection-line {
+        width: 120px;
+        animation: flowLine 2s linear infinite;
+    }
+}
+
+@media (max-width: 480px) {
+    .masterclass-image img {
+        width: 80px;
+        height: 80px;
+    }
+    .connection-line {
+        width: 60px;
+        animation: flowLine 2s linear infinite;
+    }
+}
+
+
+/* Skills Section */
+.skills {
+    text-align: center;
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 1500px;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.skills-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+.skill-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px;
+    background: #6200ea;
+    color: white;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.skill-item:hover {
+    transform: scale(1.05);
+    background: #0056b3;
+}
+
+/* Responsive Skills Layout */
+@media screen and (max-width: 768px) {
+    .skills-list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* Skills Covered*/
+/* General Section Styling */
+.analytics-skills {
+    text-align: center;
+    background: linear-gradient(to right, #41303f, #410376);
+    color: white;
+    padding: 60px 20px;
+    font-family: Arial, sans-serif;
+}
+
+.analytics-skills h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+/* Skills Container */
+.skills-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* Skill Box Styling */
+.skill-box {
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    position: relative;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+/* Color Styling for Each Skill Type */
+.technical {
+    border-left: 4px solid #e91e63;
+}
+.soft {
+    border-left: 4px solid #b57f4f;
+}
+.industry {
+    border-left: 4px solid #00bcd4;
+}
+
+/* Skill Title Styling */
+.skill-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+/* Skill Lists */
+.skill-list {
+    list-style: none;
+    padding: 0;
+}
+
+.skill-list li {
+    font-size: 16px;
+    padding: 8px;
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+/* Animation When Section is Visible */
+.show-section {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+
+/*Analytical skills mobile*/
+/* Media Query for Mobile & Tablet */
+@media screen and (max-width: 768px) {
+    .skills-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .skill-box {
+        width: 90%;
+        position: absolute;
+        opacity: 0;
+        transition: opacity 0.8s ease-in-out;
+    }
+
+    .skill-box.active {
+        opacity: 1;
+        position: relative;
+    }
+}
+
+/* Process */
+/* Enrollment Process Section */
+.enrollment-process {
+    padding: 50px 20px;
+    position: relative;
+}
+
+/* Heading */
+.enrollment-process h2 {
+    color: #3e0078;
+    font-size: 28px;
+    margin-bottom: 45px;
+   text-align: center;
+}
+
+/* Process Container */
+.process-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1000px;
+    margin: auto;
+    position: relative;
+    padding-top: 50px;
+}
+
+/* Stages - Zigzag Effect */
+.stage {
+    width: 150px;
+    text-align: center;
+    position: relative;
+}
+
+/* Alternating Positions */
+.stage.top {
+    transform: translateY(-40px);
+}
+
+.stage.bottom {
+    transform: translateY(40px);
+}
+
+/* Circle for Step Number */
+.circle {
+    width: 50px;
+    height: 50px;
+    background-color: #3e0078;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: auto;
+}
+
+
+/* line */
+.line {
+    width: 100px;
+    height: 4px;
+    /* background-color: #3e0078; */
+    position: relative;
+    border-top: 2px dashed #3e0078;
+    animation: dash-animation 2s linear infinite;
+}
+
+.diagonal-right {
+    transform: rotate(30deg) translateY(-20px);
+}
+
+.diagonal-left {
+    transform: rotate(-30deg) translateY(20px);
+}
+
+/* Arrow Style */
+.arrow-right::after {
+    content: '\2192'; /* Right Arrow */
+    font-size: 20px;
+    color: #3e0078;
+    position: absolute;
+    right: -10px;
+    top: -8px;
+}
+
+.arrow-left::before {
+    content: '\2192'; /* Left Arrow */
+    font-size: 20px;
+    color: #3e0078;
+    position: absolute;
+    right: -10px;
+    top: -8px;
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .process-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .stage {
+        transform: none;
+    }
+
+    .line {
+        width: 80px;
+        height: 4px;
+    }
+
+    .diagonal-right {
+        transform: rotate(25deg) translateY(-15px);
+    }
+
+    .diagonal-left {
+        transform: rotate(-25deg) translateY(15px);
+    }
+}
+
+
+
+
+/* Text */
+h3 {
+    margin: 5px 0;
+    color: #3e0078;
+}
+
+p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* SVG Flowing Line */
+.flow-line {
+    position: absolute;
+    top: 15%; /* Adjust for correct placement */
+    left: 0;
+    width: 100%;
+    height: 200px;
+    z-index: 1; /* Ensure it's visible */
+    pointer-events: none;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .process-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stage {
+        width: 220px;
+        text-align: center;
+        transform: translateY(0);
+    }
+
+    .flow-line {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .stage {
+        width: 200px;
+    }
+
+    .circle {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+}
+/* Process code end */
+
+
+
+/* Syllabus */
+
+/* Responsive Design */
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .Syllabus {
+        padding: 10px;
+        margin-top: 20px;
+    }
+    .Syllabus1 {
+        padding: 10px;
+        margin-top: 20px;
+    }
+    .Syllabus2 {
+        padding: 10px;
+        margin-top: 20px;
+    }
+    .Syllabus3 {
+        padding: 10px;
+        margin-top: 20px;
+    }
+    .Syllabus4 {
+        padding: 10px;
+        margin-top: 20px;
+    }
+    .Syllabus5 {
+        padding: 10px;
+        margin-top: 20px;
+    }
+
+
+
+    .course-container {
+        max-width: 100%;
+        padding: 15px;
+        border: none;
+        box-shadow: none;
+    }
+
+    /* Adjust the course header - Reduce font size but keep everything visible */
+    .course-header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .course-header h2 {
+        font-size: 16px; /* Reduce font size */
+    }
+
+    .course-header img {
+        width: 35px;
+        height: 35px;
+    }
+
+    /* Allow horizontal scrolling for tags */
+    .tags {
+        display: flex;
+        overflow-x: auto;
+        white-space: nowrap;
+        padding: 10px 0;
+        margin-left: 0;
+        gap: 5px;
+    }
+
+    .tag {
+        font-size: 12px;
+        padding: 4px 10px;
+        white-space: nowrap;
+    }
+
+    /* Chapters presented as large buttons */
+    .chapter {
+        padding: 10px;
+        font-size: 14px;
+        border-left: 4px solid #6200ea;
+        transition: background 0.3s ease-in-out;
+    }
+
+    .chapter:hover {
+        background: #e0d7ff;
+    }
+
+}
+/* Syllabus */
+
+.Syllabus {
+    text-align: center;
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 1500px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.Syllabus2 {
+    text-align: center;
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 1500px;
+    margin: auto;
+}
+
+.Syllabus3 {
+    text-align: center;
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 1500px;
+    margin: auto;
+}
+
+.Syllabus4 {
+    text-align: center;
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 1500px;
+    margin: auto;
+}
+.Syllabus5 {
+    text-align: center;
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 1500px;
+    margin: auto;
+}
+.chapter span {
+    font-weight: bold;
+}
+.chapter p {
+    align-items: self-end;
+    overflow: hidden;
+    font-style: italic;
+}
+
+.course-duration {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #0073e6;
+    background: #f0f8ff;
+    padding: 10px;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+.course-container {
+    max-width: 700px;
+    margin: auto;
+    border: 2px solid #6200ea;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.course-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.course-header img {
+    width: 10%;
+    height: 10%;
+}
+
+.tags {
+    display: flex;
+    gap: 10px;
+    margin-left: 70px;
+}
+
+.tag {
+    background: #f9eeff;
+    padding: 5px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #4a00c1;
+}
+
+.chapter {
+    padding: 12px 15px;
+    font-size: 14px;
+    border-left: 5px solid #6200ea;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 8px;
+}
+.chapter:hover {
+    background: #f0e8ff;
+    transform: translateX(5px);
+}
+
+.chapter.active {
+    background: #e3d5ff;
+    border-left: 5px solid #4a00c1;
+}
+@media (max-width: 768px) {
+    .chapter {
+        font-size: 14px;
+        padding: 10px;
+        border-left: 4px solid #6200ea;
+    }
+}
+
+/* Placement prep */
+
+.placement-container {
+    border: 2px solid #6200ea;
+    border-radius: 10px;
+    max-width: 700px;
+    text-align: center;
+    padding: 20px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #ddd;
+}
+
+.icon-box {
+    background: #6200ea;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.card {
+    flex: 1;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.yellow { background: #fff9e6; border-left: 4px solid #ffcc00; }
+.purple { background: #f9f1ff; border-left: 4px solid #8000ff; }
+.green { background: #e6fff2; border-left: 4px solid #00b300; }
+
+
+
+.card i {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #6200ea;
+}
+
+.placement-container .card {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+}
+
+@media screen and (max-width: 768px) {
+    .cards {
+        flex-direction: column; /* Stack cards vertically */
+        align-items: center; /* Center align them */
+    }
+
+    .card {
+        width: 100%; /* Full width */
+        max-width: 90%; /* Adjust for spacing */
+        margin-bottom: 15px; /* Add space between stacked cards */
+    }
+}
+
+/* Mentors */
+/* Mentor Section */
+.mentors h2{
+    text-align: center;
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 1500px;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.mentor-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px; /* To prevent unnecessary stretching */
+    margin: auto;
+}
+
+/* Ensuring 4 cards per row on large screens */
+@media (min-width: 1024px) {
+    .mentor-card {
+        flex: 1 1 calc(25% - 20px); /* 4 cards in one row */
+        max-width: calc(25% - 20px);
+    }
+}
+
+/* Ensuring 2 cards per row on medium screens */
+@media (max-width: 1023px) and (min-width: 768px) {
+    .mentor-card {
+        flex: 1 1 calc(50% - 20px); /* 2 cards in one row */
+        max-width: calc(50% - 20px);
+    }
+}
+
+/* Ensuring 1 card per row on small screens */
+@media (max-width: 767px) {
+    .mentor-card {
+        flex: 1 1 80%;
+        max-width: 85%;
+    }
+}
+
+
+/* Card Styling */
+.mentor-card {
+    width: 250px;
+    height: 360px;
+    perspective: 10000px;
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease-in-out;
+}
+
+/* Front and Back Side */
+.card-front,
+.card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Front Design */
+.card-front {
+    background: white;
+}
+
+.card-front img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.card-front h3 {
+    font-size: 1.2rem;
+    margin: 0px 0;
+    color: #333;
+}
+
+.card-front p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Social Media Icons (Both Front & Back) */
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: #007bff;
+    font-size: 20px;
+    margin: 0 8px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    opacity: 0.7;
+}
+
+/* Back Design */
+.card-back {
+    background: linear-gradient(135deg, #3e0078, #0056b3);
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.card-back p {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.card-back .social-icons a {
+    color: white; /* White icons for back */
+}
+
+/* Hover-to-Flip (Desktop) */
+.mentor-card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Click-to-Flip (Mobile) */
+.mentor-card.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+/* pricing */
+
+/* Pricing Section */
+.unique-pricing-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    background: #3E0078;
+    color: white;
+    gap: 20px;
+}
+
+.unique-process-container h3{
+    margin-bottom: 28px;
+}
+
+.unique-pricing-container {
+    max-width: 400px;
+    padding: 20px;
+}
+/* Heading Styling */
+.unique-pricing-container h4 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ff9800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Main Title */
+.unique-pricing-container h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+
+/* Discount Text */
+.discount {
+    font-size: 16px;
+    font-weight: bold;
+    color: #ff5722;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+/* Star Animation */
+.discount::after {
+    content: "⭐";
+    display: inline-block;
+    font-size: 18px;
+    animation: vibrate 0.3s infinite alternate;
+}
+
+/* Vibration Animation */
+@keyframes vibrate {
+    0% { transform: translateX(-2px); }
+    100% { transform: translateX(2px); }
+}
+/* Price Box Styling */
+.unique-price-box {
+    background: #ffffff;
+    color: #3e0078;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.unique-enroll-btn {
+    background: orange;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Process Container */
+.unique-process-container {
+    max-width: 600px;
+    padding: 20px;
+    background: white;
+    color: black;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+/* Price Styling */
+.unique-price-box h3 {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/* Total Amount Styling */
+.unique-price-box p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+/* Strikethrough Price */
+.unique-price-box del {
+    color: #e7b3b2;
+    font-size: 14px;
+}
+
+/* Discounted Price */
+.unique-price-box strong {
+    font-size: 18px;
+    font-weight: bold;
+    color: #4caf50;
+}
+
+/* Learn More Link */
+.unique-pricing-container a {
+    color: #ff9800;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.unique-pricing-container a:hover {
+    text-decoration: underline;
+}
+
+/* Enroll Button */
+.unique-enroll-btn {
+    background: #ff9800;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background 0.3s;
+    margin-left: 35%;
+}
+
+.unique-enroll-btn:hover {
+    background: #e68900;
+}
+
+/* Process Steps */
+.unique-process-steps {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.unique-process-steps img{
+    padding-top: 10%;
+    margin-top: 20px;
+}
+
+/* Animated Line */
+.unique-line {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 0%;
+    height: 4px;
+    background: #3e0078;
+    transition: width 2s linear;
+}
+
+/* Green dashed line for last step */
+.unique-line.green-dash {
+    border-top: 4px dashed rgb(4, 52, 4);
+    background: none;
+}
+
+/* Step Design */
+.unique-step {
+    text-align: center;
+    width: 120px;
+    position: relative;
+}
+
+/* Small dots on each step */
+.unique-step::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 12px;
+    height: 12px;
+    background: white;
+    border: 2px solid #3e0078;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease-in-out;
+    margin-top: 2%;
+}
+
+.unique-step.active::before {
+    opacity: 1; /* Show when line reaches */
+    background: #3e0078;
+}
+
+/* Green dot for last step */
+.unique-step.final::before {
+    border-color: green;
+    background: green;
+}
+
+.unique-step img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    position: absolute;
+    top: -70px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.unique-step h5 {
+    margin-top: 35px;
+}
+.unique-step p{
+    margin-top: 35px;
+    font-size: 14px;
+}
+
+/* Pricing Meida query */
+
+@media (max-width: 768px) {
+    .unique-pricing-section {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center;
+        padding: 30px;
+    }
+
+    .unique-pricing-container {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .unique-price-box {
+        margin: 0 auto;
+        width: 80%;
+    }
+
+    .unique-enroll-btn {
+        width: 80%;
+        margin: 15px auto 0;
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    .unique-process-container {
+        display: none; /* Hide process container on mobile */
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+

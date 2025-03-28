@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LetsBeAnalyst</title>
+    <meta name="title" content="LetsBeAnalyst">
+    <meta name="description" content="Best Platform to get solution for yourself.">
+    <!-- 
+      - google font link
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="Media-Query.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+    <!-- Announcement Bar -->
+<div class="announcement-bar" id="announcementBar">
+    <span class="announcement-text">
+      <img src="asset/Best.png" alt="Image">Empowering Future Data Analysts – Upskill, Transform, and Succeed with <strong>Letsbeanalyst!</strong>
+    </span>
+    <a href="#" class="announcement-btn">Know More<span class="arrow">→</span></a>
+
+    <button class="close-btn" onclick="closeBanner()">✖</button>
+</div>
+    <header>
+        <a href="/Index.html">
+            <div class="logo" >
+                <div>LBA</div>
+                Analytics & AI
+                <!-- <div class="nav-container"> -->
+                <button class="hamburger">☰</button>
+            </div>
+        </a>
+        <!-- Hamburger Menu -->
+        
+        <nav>
+            <ul class="nav-links">
+                <li class="dropdown" onclick="toggleDropdown(event)">
+                    <a href="#">Programs</a>
+                    <span class="expand-icon">▼</span>
+                    <div class="dropdown-content">
+                        <iframe src="Courses.html"></iframe>
+                    </div>
+                </li>
+                <li><a href="#">Placements</a></li>
+                <li><a href="/Blog.htm">Blogs</a></li>
+                <li><a href="#">Hire From Us</a></li>
+                <li><a href="/Opportunity/AllOpportunity.html">Work with Us</a></li>
+            </ul>
+        </nav>
+    
+        
+        <button class="btn explore-btn" id="nav-enroll">Enroll Now</button>
+    </header>   
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h4 class="upskill">✔ Learn. Grow. Get Hired.</h4>
+                <h1>Turn your <span class="highlight">Journey</span> from Non-IT to IT Excellence.</h1>
+                <p class="subtext">Learn skills you didn’t get in school, directly from India’s best experts.</p>
+                <button class="btn explore-btn" onclick="location.href='Courses.html'">Explore Programs</button>
+                <section class="stats-container">
+                    <div class="stats-card">
+                        <div class="stat-item">
+                            <div class="icon">
+                                <img src="asset/offer.png" alt="offer Icon">
+                            </div>
+                            <div class="stat-text">
+                                <span class="stat-value">40% Off</span>
+                                <p>Avail</p>
+                            </div>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="stat-item">
+                            <div class="icon">
+                                <img src="asset/rupee.png" alt="Money Icon">
+                            </div>
+                            <div class="stat-text">
+                                <span class="stat-value">3500 ₹</span>
+                                <p>Enroll now</p>
+
+                            </div>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="stat-item">
+                            <div class="icon">
+                                <img src="asset/Timer.png" alt="Timer Icon">
+                            </div>
+                            <div class="stat-text">
+                                <span class="stat-value" id="timer">06:00:00</span>
+                                <p>Time Left</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+            </div>
+            <div class="hero-image">
+                <img src="asset/Landing Page.jpg" alt="Mentor">
+                <div class="badge mentor">1:1 Mentorship</div>
+                <div class="badge live-classes">Live Classes</div>
+                <div class="badge career-support">Career Transition</div>
+                <div class="badge internship">Internship</div>
+                <div class="badge returnship">Returnship</div>
+
+            </div>
+        </section>
+        <section class="companies-section">
+            <h2 class="companies-heading">These companies are waiting for you! <span>(300+ Companies)</span></h2>
+            
+            <div class="logo-slider">
+                <div class="logos">
+                    <img src="asset/swiggy.avif" alt="Company 1">
+                    <img src="asset/zomato.avif" alt="Company 2">
+                    <img src="asset/American-Express-Logo-Download-Free-PNG.png" alt="Company 3">
+                    <img src="asset/RBL_Bank_SVG_Logo.svg.png" alt="Company 4">
+                    <img src="asset/Target-Logo.png" alt="Company 5">
+                    <img src="asset/ANZ-Logo.png" alt="Company 6">
+                    <img src="asset/blinkit_owler_20240819_125842_original.png" alt="Company 7">
+                    <img src="asset/UC.jpg" alt="Company 8">
+                    <img src="asset/swiggy.avif" alt="Company 1">
+                    <img src="asset/zomato.avif" alt="Company 2">
+                    <img src="asset/American-Express-Logo-Download-Free-PNG.png" alt="Company 3">
+                    <img src="asset/RBL_Bank_SVG_Logo.svg.png" alt="Company 4">
+                    <img src="asset/Target-Logo.png" alt="Company 5">
+                    <img src="asset/ANZ-Logo.png" alt="Company 6">
+                    <img src="asset/blinkit_owler_20240819_125842_original.png" alt="Company 7">
+                    <img src="asset/UC.jpg" alt="Company 8">
+                </div>
+            </div>
+        </section>
+      
+        <div class="faq-heading"><h3>Process of Success!</h3></div>
+        <div class="roadmap-container">
+            <div class="roadmap-path">
+                <svg viewBox="0 0 1200 300" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="animated-path" 
+                        d="M 50 200 Q 200 50, 350 200 T 650 200 T 950 200 T 1150 200"
+                        stroke="#333" fill="transparent" stroke-width="8" stroke-linecap="round"/>
+                </svg>
+            </div>
+        
+            <div class="roadmap-steps">
+                <div class="step bottom"><i class="fas fa-search green"></i> <span>Evaluation</span></div>
+                <div class="step top"><i class="fas fa-map red"></i> <span>Custom Roadmap</span></div>
+                <div class="step bottom"><i class="fas fa-chalkboard-teacher yellow"></i> <span>Live Session</span></div>
+                <div class="step top"><i class="fas fa-tasks blue"></i> <span>Assignments</span></div>
+                <div class="step bottom"><i class="fas fa-chart-line purple"></i> <span>Weekly Evaluation</span></div>
+                <div class="step top"><i class="fas fa-microphone orange"></i> <span>Mock Interview</span></div>
+                <div class="step bottom goal"><i class="fas fa-briefcase teal"></i> <span>🎯 Placement</span></div>
+            </div>
+        </div>
+        
+
+
+        
+         <!-- Ladder Roadmap (Visible Only on Small Screens) -->
+         <div class="roadmap-container-phone">
+            <div class="ladder">
+                <div class="step"><i class="fas fa-search green"></i> <span>Evaluation</span></div>
+                <div class="step"><i class="fas fa-map red"></i> <span>Custom Roadmap</span></div>
+                <div class="step"><i class="fas fa-chalkboard-teacher yellow"></i> <span>Live Session</span></div>
+                <div class="step"><i class="fas fa-tasks blue"></i> <span>Assignments</span></div>
+                <div class="step"><i class="fas fa-chart-line purple"></i> <span>Weekly Evaluation</span></div>
+                <div class="step"><i class="fas fa-microphone orange"></i> <span>Mock Interview</span></div>
+                <div class="goal"><i class="fas fa-briefcase teal"></i> 🎯 <span>Placement</span></div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FAQ -->
+    <div class="faq-heading">Got a Question:<span>Let's chat !</span></div>
+
+<!-- Bot message at the top -->
+<!-- <div class="bot-message">
+    <h4>Hi! Select a question below:</h4></p>
+</div> -->
+
+<div class="faq-container">
+    <!-- Left Column - Image -->
+    <div class="faq-image">
+        <img src="asset/FAQ.avif" alt="FAQ">
+    </div>
+
+    <!-- Middle Column - First Set of Questions -->
+    <div class="faq-columns">
+        <div class="chat-container">
+            <div class="message user" onclick="showAnswer(0)">What types of courses do you offer?</div>
+            <div class="message answer" id="answer-0">We offer four types of training: Daily Live Courses, Personal Coaching, Weekend Programs, and Weekly Free Training.</div>
+
+            <div class="message user" onclick="showAnswer(1)">What is the Daily Live Course?</div>
+            <div class="message answer" id="answer-1">The Daily Course provides live interactive training for 2 hours daily in small groups of 5 to 10 participants. It includes real-time project work, hands-on practice, and premium sessions.</div>
+
+            <div class="message user" onclick="showAnswer(2)">What topics are covered in the Daily Live Course?</div>
+            <div class="message answer" id="answer-2">You can enroll in specific or complete tool training, including:
+                <br>16-Hour SQL Training
+                <br>20-Hour Python Training
+                <br>20-Hour Power BI from Scratch
+            </div>
+
+            <div class="message user" onclick="showAnswer(3)">What is Personal Coaching?</div>
+            <div class="message answer" id="answer-3">Personal Coaching offers one-on-one mentorship with top industry professionals. You can book short or long-term mentorship for resume building, mock interviews, interview preparation, and career transition guidance.</div>
+            <div class="message user" onclick="showAnswer(4)">What is the Weekend Program?</div>
+            <div class="message answer" id="answer-4">The Weekend Program is designed for working professionals. Sessions are conducted on weekends, while assignments and projects are given for weekdays. A 15-minute daily connect ensures continuity in learning.</div>
+
+        </div>
+    </div>
+
+    <!-- Right Column - Remaining Questions -->
+    <div class="faq-columns">
+        <div class="chat-container">
+            <div class="message user" onclick="showAnswer(5)">Do you offer any free training?</div>
+            <div class="message answer" id="answer-5">Yes, we conduct weekly free training sessions, including webinars, bootcamps, marathons, and quizzes.</div>
+
+            <div class="message user" onclick="showAnswer(6)">Do I receive a certificate after completing a course?</div>
+            <div class="message answer" id="answer-6">Yes, an industry-recognized certificate is provided upon course completion.</div>
+
+            <div class="message user" onclick="showAnswer(7)">How do I enroll in a course?</div>
+            <div class="message answer" id="answer-7">You can enroll directly on our website by selecting your preferred course and completing the registration process.</div>
+
+            <div class="message user" onclick="showAnswer(8)">What are the payment options?</div>
+            <div class="message answer" id="answer-8">We accept UPI, credit and debit cards, net banking, and other digital payment methods.</div>
+
+            <div class="message user" onclick="showAnswer(9)">Can I get a refund if I am not satisfied?</div>
+            <div class="message answer" id="answer-9">Yes, we have a refund policy for eligible cases. Please check our refund policy page for details.</div>
+        </div>
+    </div>
+</div>
+   
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <div class="logo">
+                    <div>LBA</div>
+                    Analytics & AI
+                </div>               
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-dribbble"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+    
+            <div class="footer-links">
+                <h3>Get in Touch</h3>
+                <p>Remote</p>
+                <p>info@letsbeanalyst.com</p>
+                <p>+91 (120) 316 88 32</p>
+                <p>(10:00 to 17:00 IST)</p>
+            </div>
+    
+            <div class="footer-links">
+                <h3>Learn More</h3>
+                <ul>
+                    <li><a href="Courses.html">Programs</a></li>
+                    <li><a href="#">Placements</a></li>
+                    <li><a href="#">Blogs</a></li>
+
+
+                </ul>
+            </div>
+           
+    
+            <div class="newsletter">
+                <h3>Our Newsletter</h3>
+                <p>Subscribe to our newsletter to get our news & deals delivered to you.</p>
+                <div class="subscribe">
+                    <input type="email" placeholder="Email Address">
+                    <button>Join</button>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-line">
+            
+            <ul>
+            <p>© 2025 LetsBeAnalyst. All rights reserved.</p>
+            <li><a href="Terms-Conditions.html">Terms & Conditions</a></li>
+            <li><a href="privacyPolicy.html">Privacy Policy</a></li>
+            <li><a href="refundPolicy.html">Refund & Cancellation Policy</a></li>
+        </ul>
+        </div>
+    </footer>
+    <script src="script.js"></script>   
+
+     
+</body>
+</html>

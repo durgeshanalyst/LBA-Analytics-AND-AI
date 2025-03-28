@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Chat</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f3f3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .chat-container {
+            width: 90%;
+            max-width: 400px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .message {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            opacity: 0;
+            transform: translateY(10px);
+            animation: fadeIn 0.3s forwards;
+        }
+        .user {
+            justify-content: flex-end;
+        }
+        .bot {
+            justify-content: flex-start;
+        }
+        .bubble {
+            padding: 10px;
+            border-radius: 10px;
+            max-width: 80%;
+        }
+        .user .bubble {
+            background-color: #007bff;
+            color: white;
+        }
+        .bot .bubble {
+            background-color: #e0e0e0;
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container" id="chat">
+    </div>
+    <script>
+        const faqData = [
+            { question: "What is this website about?", answer: "This website provides insightful content and services on data analytics and technology." },
+            { question: "How can I contact support?", answer: "You can contact support via email at support@example.com." },
+            { question: "Do you offer free resources?", answer: "Yes! We have a blog section with various free learning materials." },
+            { question: "Can I request a custom service?", answer: "Absolutely! Just fill out our contact form, and we’ll get back to you." }
+        ];
+
+        const chatContainer = document.getElementById("chat");
+
+        faqData.forEach((faq, index) => {
+            setTimeout(() => {
+                const userMessage = document.createElement("div");
+                userMessage.classList.add("message", "user");
+                userMessage.innerHTML = `<div class='bubble'>${faq.question}</div>`;
+                chatContainer.appendChild(userMessage);
+
+                setTimeout(() => {
+                    const botMessage = document.createElement("div");
+                    botMessage.classList.add("message", "bot");
+                    botMessage.innerHTML = `<div class='bubble'>${faq.answer}</div>`;
+                    chatContainer.appendChild(botMessage);
+                }, 1000);
+            }, index * 2000);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masterclass</title>
+    <link rel="stylesheet" href="EndtoEndDataAnalytics.css">
+    <link rel="stylesheet" href="Media-Query.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet">
+  
+    
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <!-- for mobile view -->
+    <header>
+       
+        <nav class="navbar">
+            <a href="../../index.html">
+            <div class="logo" >
+                <div>LBA</div>
+                Analytics & AI
+            </div>
+        </a>
+            <!-- Custom Hamburger Menu (Only One Toggle Button) -->
+            <div class="custom-menu" onclick="toggleMenu()">
+                <span class="line short"></span>
+                <span class="line long"></span>
+                <span class="line medium"></span>
+                <span class="line longest"></span>
+            </div>
+    
+            <ul id="nav-menu">
+                <li><a href="#">Masterclass</a></li>
+                <li><a href="#analytics-skills">Process</a></li>
+                <li><a href="#Syllabus">Syllabus</a></li>
+                <li><a href="#Mentors">Mentors</a></li>
+                <li><a href="#unique-pricing-section">Price</a></li>
+            </ul>
+    
+            <div class="nav-buttons">
+                <button class="btn">Download Brochure</button>
+            </div>
+        </nav>
+    </header>
+    
+    
+    <!-- Main Content -->
+    <main>
+        <section class="masterclass">
+            <div class="masterclass-container">
+                <!-- Left Side (Video & UI) -->
+                <div class="masterclass-image">
+                    <img src="/asset/durgesh Smile-Photoroom.jpg" alt="Masterclass Session">
+                    <div class="mentor-info">
+                        <p><strong></strong></p>
+                    </div>
+                </div>
+    
+                <!-- Right Side (Content) -->
+                <div class="masterclass-content">
+                    <p class="highlight-text">MASTERCLASS</p>
+                    <h2>Level up your skills, Personalized Mentorship</h2>
+                    <div class="experience">
+                        <span class="emoji"><i class="fas fa-chalkboard-teacher"></i>  Experience the masterclass</span>
+                
+                    </div>
+    
+                    <ul class="masterclass-list">
+                        <li><span>✔</span> Solve live business challenges, not just watch tutorials</li>
+                        <li><span>✔</span> Get instant mentor support—no question left unanswered</li>
+                        <li><span>✔</span>Kickstart your career with an accelerated learning path</li>
+                        <li><span>✔</span> Master real-world skills with top industry experts</li>
+                    </ul>
+    
+                    <div class="buttons">
+                        <button class="btn outline">Contact Us</button>
+                        <button class="btn secondary">⚡ Try Masterclass</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Skills Covered -->
+        <section id="analytics-skills" class="analytics-skills">
+            <h2>Data Analytics Skills</h2>
+            <div class="skills-container">
+                <!-- Technical Skills -->
+                <div class="skill-box technical">
+                    <div class="skill-title">Technical Skills</div>
+                    <ul class="skill-list">
+                        <li>SQL</li>
+                        <li>Python</li>
+                        <li>Regression</li>
+                        <li>Tableau</li>
+                        <li>Data Visualization</li>
+                    </ul>
+                </div>
+        
+                <!-- Soft Skills -->
+                <div class="skill-box soft">
+                    <div class="skill-title">Soft Skills</div>
+                    <ul class="skill-list">
+                        <li>Problem Solving</li>
+                        <li>Communication</li>
+                        <li>Continuous Learning</li>
+                        <li>Collaboration</li>
+                        <li>Adaptability</li>
+                    </ul>
+                </div>
+        
+                <!-- Industry-Specific Skills -->
+                <div class="skill-box industry">
+                    <div class="skill-title">Industry Specific Skills</div>
+                    <ul class="skill-list">
+                        <li>Accounting</li>
+                        <li>Healthcare</li>
+                        <li>Supply Chain</li>
+                        <li>Marketing</li>
+                        <li>Retail</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+<!-- Process -->
+<section id="process-flow" class="process-flow">
+    <h2>Enrollment Process</h2>
+    <div class="process-container">
+        <div class="card yellow">
+            <i class="fas fa-user icon"></i>
+            <h3>Admission</h3>
+            <p>Complete the admission form and submit required documents.</p>
+        </div>
+        <div class="dashed-arrow"></div>
+        <div class="card purple">
+            <i class="fas fa-key icon"></i>
+            <h3>Credentials Creation</h3>
+            <p>Your login credentials are generated for portal access.</p>
+        </div>
+        <div class="dashed-arrow"></div>
+        <div class="card green">
+            <i class="fas fa-book icon"></i>
+            <h3>Knowledge Base</h3>
+            <p>KT sessions to familiarize yourself with resources.</p>
+        </div>
+        <div class="dashed-arrow"></div>
+        <div class="card yellow">
+            <i class="fas fa-check icon"></i>
+            <h3>Day 1 - Start</h3>
+            <p>Begin your journey with full access to all tools & support.</p>
+        </div>
+    </div>
+</section>
+
+
+<!-- Syllabus -->
+<section id="Syllabus" class="Syllabus">
+    <h2>Syllabus</h2>
+    <div class="course-duration">Duration: <span>24 Weeks, 4 Weeks Each</span></div>
+    <div class="course-container">
+        <div class="course-header" onclick="toggleExcelCourse()">
+            <div class="course1" style="display: flex; align-items: center; gap: 15px; ">
+                <img src="/asset/excel.avif" alt="Excel Icon">
+                <h2>Excel: Beginner to Advanced</h2>
+            </div>
+            <i id="course-toggle-icon1" class="fas fa-chevron-down"></i>
+        </div>
+        
+        <div class="tags">
+            <span class="tag">Excel</span>
+            <span class="tag">Data Analysis</span>
+            <span class="tag">Data Manipulation</span>
+        </div>
+        
+        <div id="course-content" style="display: none;">
+            <div class="chapter" onclick="toggleChapter(this)">
+                <span class="chapter-title">CHAPTER 1 - Kick Start Microsoft Excel</span>
+                <p style="display: none;">This chapter provides an overview of Excel's interface, essential shortcuts, and basic functionalities to help users navigate and work efficiently.</p>
+            </div>            
+            <div class="chapter" onclick="toggleChapter(this)">
+                <span class="chapter-title">CHAPTER 2 - Data Handling & Formatting</span>
+                <p style="display: none;">Learn how to organize, clean, and format data effectively using conditional formatting, data validation, and number formatting techniques.</p>
+            </div>
+            <div class="chapter" onclick="toggleChapter(this)">
+                <span class="chapter-title">CHAPTER 3 - Working with Formulas</span>
+                <p style="display: none;">Master essential Excel formulas, including mathematical operations, logical functions, lookup functions, and advanced calculations for data analysis.</p>
+            </div>
+            <div class="chapter" onclick="toggleChapter(this)">
+                <span class="chapter-title">CHAPTER 4 - Text and Date Functions</span>
+                <p style="display: none;">Learn how to manipulate text and date values in Excel using functions like CONCATENATE, LEFT, RIGHT, MID, TEXT, TODAY, and NETWORKDAYS.</p>
+            </div>
+            <div class="chapter" onclick="toggleChapter(this)">
+                <span class="chapter-title">CHAPTER 5 - Data Cleaning & Preparation</span>
+                <p style="display: none;">Understand techniques for handling missing values, removing duplicates, and using functions like TRIM, SUBSTITUTE, and CLEAN for data preparation.</p>
+            </div>
+            <div class="chapter" onclick="toggleChapter(this)">
+                <span class="chapter-title">CHAPTER 6 - Data Analysis using Pivot Tables</span>
+                <p style="display: none;">Learn to summarize and analyze large datasets efficiently using Pivot Tables, filters, grouping, and Pivot Charts.</p>
+            </div>
+            <div class="chapter" onclick="toggleChapter(this)">
+                <span class="chapter-title">CHAPTER 7 - Data Visualization with Charts & Graphs</span>
+                <p style="display: none;">Understand different types of charts and how to visualize data effectively using bar charts, line charts, pie charts, and dynamic charting techniques.</p>
+            </div>
+            <div class="chapter" onclick="toggleChapter(this)">
+                <span class="chapter-title">CHAPTER 8 - Advanced Excel Techniques</span>
+                <p style="display: none;">Explore Named Ranges, Dynamic Arrays, What-If Analysis, Goal Seek, and Solver to enhance data analysis capabilities.</p>
+            </div>
+            <div class="chapter" onclick="toggleChapter(this)">
+                <span class="chapter-title">CHAPTER 9 - Introduction to Macros & Automation</span>
+                <p style="display: none;">Learn how to automate repetitive tasks using Excel Macros and VBA basics for increased efficiency.</p>
+            </div>
+            <div class="chapter" onclick="toggleChapter(this)">
+                <span class="chapter-title">CHAPTER 10 - Case Study & Capstone Project</span>
+                <p style="display: none;">Apply all the skills learned to real-world scenarios, clean and analyze a dataset, create an automated dashboard, and present insights.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+        
+<section class="Syllabus2">
+    <div class="course-container">
+        <div class="course-header" onclick="toggleSqlCourse()">
+            <div class="course1" style="display: flex; align-items: center; gap: 15px; ">
+                <img src="/asset/SQL.avif" alt="SQL Icon">
+                <h2>SQL: Beginner to Advanced</h2>
+            </div>
+            <i id="course-toggle-icon2" class="fas fa-chevron-down"></i>
+        </div>
+        
+        <div class="tags">
+            <span class="tag">SQL Server</span>
+            <span class="tag">Data Manipulation</span>
+            <span class="tag">Case Study</span>
+        </div>
+        
+        <div id="course-content-sql" style="display: none;">
+            <div class="chapter" onclick="toggleChapter(this)">
+                <span class="chapter-title">CHAPTER 1 - Introduction to SQL & Databases</span>
+                <p style="display: none;">Understanding databases, SQL fundamentals, and basic commands to create and manage tables.</p>
+            </div>
+            <div class="chapter" onclick="toggleChapter(this)">
+                <span class="chapter-title">CHAPTER 2 - Querying Data with SELECT & WHERE</span>
+                <p style="display: none;">Using SELECT, WHERE clause, and filtering techniques to retrieve specific data.</p>
+            </div>
+            <div class="chapter" onclick="toggleChapter(this)">
+                <span class="chapter-title">CHAPTER 3 - Data Aggregation with GROUP BY & HAVING</span>
+                <p style="display: none;">Learning how to summarize and group data using GROUP BY and filter grouped data with HAVING.</p>
+            </div>
+            <div class="chapter" onclick="toggleChapter(this)">
+                <span class="chapter-title">CHAPTER 4 - Sorting & Ordering Data</span>
+                <p style="display: none;">Using ORDER BY to sort data and understanding Query Execution Order.</p>
+            </div>
+            <div class="chapter" onclick="toggleChapter(this)">
+                <span class="chapter-title">CHAPTER 5 - Joins & Set Operators</span>
+                <p style="display: none;">Exploring INNER JOIN, LEFT JOIN, RIGHT JOIN, NATURAL JOIN, UNION, and INTERSECT.</p>
+            </div>
+            <div class="chapter" onclick="toggleChapter(this)">
+                <span class="chapter-title">CHAPTER 6 - Advanced Joins & Nested Queries</span>
+                <p style="display: none;">Understanding SELF JOIN, CROSS JOIN, nested queries, and Common Table Expressions (CTEs).</p>
+            </div>
+            <div class="chapter" onclick="toggleChapter(this)">
+                <span class="chapter-title">CHAPTER 7 - Built-in Functions & Conditional Logic</span>
+                <p style="display: none;">Using string, numeric, and date functions along with CASE WHEN for conditional statements.</p>
+            </div>
+            <div class="chapter" onclick="toggleChapter(this)">
+                <span class="chapter-title">CHAPTER 8 - Temporary Tables, Views & Partitioning</span>
+                <p style="display: none;">Exploring temp tables, views, PIVOT, and partitioning techniques.</p>
+            </div>
+            <div class="chapter" onclick="toggleChapter(this)">
+                <span class="chapter-title">CHAPTER 9 - SQL Procedures, Triggers & Performance Tuning</span>
+                <p style="display: none;">Understanding stored procedures, triggers, and optimizing queries for performance.</p>
+            </div>
+            <div class="chapter" onclick="toggleChapter(this)">
+                <span class="chapter-title">CHAPTER 10 - Real-world Case Study & Final Project</span>
+                <p style="display: none;">Applying SQL skills to analyze data, create reports, and solve a real-world problem.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="Syllabus3">
+    <div class="course-container">
+        <div class="course-header" onclick="togglePythonCourse()">
+            <div class="course1" style="display: flex; align-items: center; gap: 15px;">
+                <img src="/asset/Python.avif" alt="Python Icon">
+                <h2>Python: Beginner to Advanced for Data Analysis</h2>
+            </div>
+            <i id="course-toggle-icon3" class="fas fa-chevron-down"></i>
+        </div>
+
+        <div class="tags">
+            <span class="tag">Data Analysis</span>
+            <span class="tag">Pandas</span>
+            <span class="tag">Data Visualization</span>
+            <span class="tag">Automation</span>
+        </div>
+
+        <div id="course-content-python" style="display: none;">
+            <div class="chapter" onclick="toggleChapter(this)">
+                <span class="chapter-title">CHAPTER 1 - Introduction to Python for Data Analysis</span>
+                <p style="display: none;">Understanding Python's role in data analysis, setting up the environment, and basic syntax.</p>
+            </div>
+            <div class="chapter" onclick="toggleChapter(this)">
+                <span class="chapter-title">CHAPTER 2 - Working with Data Structures</span>
+                <p style="display: none;">Lists, Tuples, Dictionaries, and their applications in data handling.</p>
+            </div>
+            <div class="chapter" onclick="toggleChapter(this)">
+                <span class="chapter-title">CHAPTER 3 - Data Handling with NumPy</span>
+                <p style="display: none;">Using NumPy for numerical operations, arrays, and performance optimization.</p>
+            </div>
+            <div class="chapter" onclick="toggleChapter(this)">
+                <span class="chapter-title">CHAPTER 4 - Data Manipulation with Pandas</span>
+                <p style="display: none;">Reading, cleaning, and transforming datasets using Pandas DataFrames.</p>
+            </div>
+            <div class="chapter" onclick="toggleChapter(this)">
+                <span class="chapter-title">CHAPTER 5 - Data Visualization with Matplotlib & Seaborn</span>
+                <p style="display: none;">Creating meaningful charts and visual representations of data.</p>
+            </div>
+            <div class="chapter" onclick="toggleChapter(this)">
+                <span class="chapter-title">CHAPTER 6 - Exploratory Data Analysis (EDA)</span>
+                <p style="display: none;">Techniques to understand data distribution, patterns, and outliers.</p>
+            </div>
+            <div class="chapter" onclick="toggleChapter(this)">
+                <span class="chapter-title">CHAPTER 7 - Working with Databases using SQL in Python</span>
+                <p style="display: none;">Connecting to databases, running SQL queries with Python using SQLite and Pandas.</p>
+            </div>
+            <div class="chapter" onclick="toggleChapter(this)">
+                <span class="chapter-title">CHAPTER 8 - Data Automation and Scripting</span>
+                <p style="display: none;">Automating repetitive tasks like data cleaning and report generation using Python.</p>
+            </div>
+            <div class="chapter" onclick="toggleChapter(this)">
+                <span class="chapter-title">CHAPTER 9 - Introduction to Statistics for Data Analysis</span>
+                <p style="display: none;">Basic statistical concepts, measures of central tendency, and correlation.</p>
+            </div>
+            <div class="chapter" onclick="toggleChapter(this)">
+                <span class="chapter-title">CHAPTER 10 - Case Study & Final Project</span>
+                <p style="display: none;">Applying Python skills to analyze real-world datasets and present insights.</p>
+            </div>
+        </div>
+    </div>
+</section>
+        
+<section class="Syllabus4">
+    <div class="course-container">
+        <div class="course-header" onclick="togglePowerBICourse()">
+            <div class="course1" style="display: flex; align-items: center; gap: 15px;">
+                <img src="/asset/Powe BI.avif" alt="Power BI Icon">
+                <h2>Power BI: Beginner to Advanced</h2>
+            </div>
+            <i id="course-toggle-icon4" class="fas fa-chevron-down"></i>
+        </div>
+
+        <div class="tags">
+            <span class="tag">Power Query</span>
+            <span class="tag">Data Modeling</span>
+            <span class="tag">DAX</span>
+            <span class="tag">Dashboards</span>
+        </div>
+
+        <div id="course-content-powerbi" style="display: none;">
+            <div class="chapter" onclick="toggleChapter(this)">
+                <span class="chapter-title">CHAPTER 1 - Introduction to Power BI</span>
+                <p style="display: none;">Overview of Power BI, installation, interface navigation, and basic workflow.</p>
+            </div>
+            <div class="chapter" onclick="toggleChapter(this)">
+                <span class="chapter-title">CHAPTER 2 - Connecting to Data Sources</span>
+                <p style="display: none;">Importing data from Excel, databases, web, and APIs into Power BI.</p>
+            </div>
+            <div class="chapter" onclick="toggleChapter(this)">
+                <span class="chapter-title">CHAPTER 3 - Data Transformation with Power Query</span>
+                <p style="display: none;">Cleaning, shaping, and transforming raw data using Power Query Editor.</p>
+            </div>
+            <div class="chapter" onclick="toggleChapter(this)">
+                <span class="chapter-title">CHAPTER 4 - Advanced Power Query Techniques</span>
+                <p style="display: none;">Merging, appending, filtering, pivoting, and creating custom columns.</p>
+            </div>
+            <div class="chapter" onclick="toggleChapter(this)">
+                <span class="chapter-title">CHAPTER 5 - Introduction to Data Modeling</span>
+                <p style="display: none;">Understanding relationships, cardinality, and star schema modeling.</p>
+            </div>
+            <div class="chapter" onclick="toggleChapter(this)">
+                <span class="chapter-title">CHAPTER 6 - Advanced Data Modeling</span>
+                <p style="display: none;">Creating calculated tables, hierarchies, and optimizing data models.</p>
+            </div>
+            <div class="chapter" onclick="toggleChapter(this)">
+                <span class="chapter-title">CHAPTER 7 - Introduction to DAX (Data Analysis Expressions)</span>
+                <p style="display: none;">Fundamentals of DAX, measures vs calculated columns, and basic functions.</p>
+            </div>
+            <div class="chapter" onclick="toggleChapter(this)">
+                <span class="chapter-title">CHAPTER 8 - Advanced DAX Formulas</span>
+                <p style="display: none;">Using FILTER, SUMX, RANKX, and context transition for deep analysis.</p>
+            </div>
+            <div class="chapter" onclick="toggleChapter(this)">
+                <span class="chapter-title">CHAPTER 9 - Time Intelligence in DAX</span>
+                <p style="display: none;">Implementing YTD, MTD, QTD, running totals, and other time-based calculations.</p>
+            </div>
+            <div class="chapter" onclick="toggleChapter(this)">
+                <span class="chapter-title">CHAPTER 10 - Creating Interactive Visualizations</span>
+                <p style="display: none;">Building bar charts, line charts, slicers, maps, and KPI indicators.</p>
+            </div>
+            <div class="chapter" onclick="toggleChapter(this)">
+                <span class="chapter-title">CHAPTER 11 - Advanced Visualizations & Custom Charts</span>
+                <p style="display: none;">Working with custom visuals, conditional formatting, and storytelling techniques.</p>
+            </div>
+            <div class="chapter" onclick="toggleChapter(this)">
+                <span class="chapter-title">CHAPTER 12 - Building Dashboards & Reports</span>
+                <p style="display: none;">Designing professional dashboards, page navigation, and user experience best practices.</p>
+            </div>
+            <div class="chapter" onclick="toggleChapter(this)">
+                <span class="chapter-title">CHAPTER 13 - Publishing & Sharing Reports</span>
+                <p style="display: none;">Publishing reports to Power BI Service, setting up workspaces, and sharing dashboards.</p>
+            </div>
+            <div class="chapter" onclick="toggleChapter(this)">
+                <span class="chapter-title">CHAPTER 14 - Power BI Automation & Performance Optimization</span>
+                <p style="display: none;">Optimizing queries, incremental refresh, and automating data updates.</p>
+            </div>
+            <div class="chapter" onclick="toggleChapter(this)">
+                <span class="chapter-title">CHAPTER 15 - Real-world Case Study & Final Project</span>
+                <p style="display: none;">Applying Power BI skills to build a complete data-driven dashboard and business report.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="Syllabus5">
+    <div class="course-container">
+        <div class="course-header" onclick="toggleBACourse()">
+            <div class="course1" style="display: flex; align-items: center; gap: 15px;">
+                <img src="/asset/BusinessAcumen.avif" alt="Business Acumen Icon">
+                <h2>Business Acumen: High-Demand Guide</h2>
+            </div>
+            <i id="course-toggle-icon5" class="fas fa-chevron-down"></i>
+        </div>
+
+        <div class="tags">
+            <span class="tag">Guestimates</span>
+            <span class="tag">Case Study</span>
+            <span class="tag">Domain KT</span>
+        </div>
+
+        <div id="course-content-ba" style="display: none;">
+            <div class="chapter" onclick="toggleChapter(this)">
+                <span class="chapter-title">CHAPTER 1 - Introduction to Business Acumen</span>
+                <p style="display: none;">Understanding business fundamentals, key business drivers, and decision-making processes.</p>
+            </div>
+            <div class="chapter" onclick="toggleChapter(this)">
+                <span class="chapter-title">CHAPTER 2 - Understanding Industry & Market Trends</span>
+                <p style="display: none;">Exploring industry structures, competitive landscapes, and market dynamics.</p>
+            </div>
+            <div class="chapter" onclick="toggleChapter(this)">
+                <span class="chapter-title">CHAPTER 3 - Problem-Solving with Guestimates</span>
+                <p style="display: none;">Learning guestimation techniques for business scenarios and case interviews.</p>
+            </div>
+            <div class="chapter" onclick="toggleChapter(this)">
+                <span class="chapter-title">CHAPTER 4 - Case Study: Business Growth Strategies</span>
+                <p style="display: none;">Analyzing real-world business growth strategies using structured problem-solving.</p>
+            </div>
+            <div class="chapter" onclick="toggleChapter(this)">
+                <span class="chapter-title">CHAPTER 5 - Financial Acumen for Business Decision Making</span>
+                <p style="display: none;">Interpreting financial statements, budgeting, and profitability analysis.</p>
+            </div>
+            <div class="chapter" onclick="toggleChapter(this)">
+                <span class="chapter-title">CHAPTER 6 - Domain Knowledge Transfer (KT) Essentials</span>
+                <p style="display: none;">Learning about major industries: Retail, Finance, Healthcare, and IT.</p>
+            </div>
+            <div class="chapter" onclick="toggleChapter(this)">
+                <span class="chapter-title">CHAPTER 7 - Competitive Analysis & Business Strategy</span>
+                <p style="display: none;">Understanding Porter’s Five Forces, SWOT analysis, and strategic frameworks.</p>
+            </div>
+            <div class="chapter" onclick="toggleChapter(this)">
+                <span class="chapter-title">CHAPTER 8 - KPIs & Metrics in Business Analysis</span>
+                <p style="display: none;">Identifying and tracking key performance indicators across different industries.</p>
+            </div>
+            <div class="chapter" onclick="toggleChapter(this)">
+                <span class="chapter-title">CHAPTER 9 - Business Forecasting & Decision Making</span>
+                <p style="display: none;">Understanding demand forecasting, data-driven decision making, and risk management.</p>
+            </div>
+            <div class="chapter" onclick="toggleChapter(this)">
+                <span class="chapter-title">CHAPTER 10 - Case Study: Digital Transformation & Business Innovation</span>
+                <p style="display: none;">Exploring how businesses leverage technology to drive innovation and efficiency.</p>
+            </div>
+        </div>
+    </div>
+</section>
+        <!-- placement prep -->
+        <div class="placement-container">
+            <div class="header">
+                <div class="icon-box">
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="text-box">
+                    <h2>Placement Assistance</h2>
+                    <p>Our career counselors are ready to help you whenever you need them</p>
+                </div>
+                <div class="icon-box">
+                    <i class="fas fa-briefcase"></i>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="card yellow">
+                    <i class="fas fa-id-badge"></i>
+                    <h3>Profile Building</h3>
+                    <p>Build strong resume and social profiles that stand out</p>
+                </div>
+                <div class="card purple">
+                    <i class="fas fa-comments"></i>
+                    <h3>Interview preparation</h3>
+                    <p>Ace interviews with Experts, Personalized 1 to 1 Mock Interview </p>
+                </div>
+                <div class="card green">
+                    <i class="fas fa-star"></i>
+                    <h3>Get your dream job</h3>
+                    <p>Master the skill and become a pro. Be the New version of your!</p>
+                </div>
+            </div>
+        </div>
+
+        <!--Mentors  -->
+        <section id = "Mentors" class="mentors">
+            <h2>Meet Your Mentors</h2>
+            <div class="mentor-container">
+                <!-- Mentor 1 -->
+                <div class="mentor-card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="/asset/Durgesh-new.png" alt="Mentor 1">
+                            <h3>Durgesh Kumar</h3>
+                            <p>Data Analytics/ Engineering</p>
+                            <div class="social-icons">
+                                <a href="#" class="fab fa-linkedin"></a>
+                                <a href="#" class="fab fa-x"></a>
+                                <a href="#" class="fab fa-github"></a>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <p>Experinced from Microsoft,Startups,MNC in Data Analytics, ML,Retail, Supply Chain, Marketing and much more.</p>
+                            <div class="social-icons">
+                                <a href="#" class="fab fa-linkedin"></a>
+                                <a href="#" class="fab fa-x"></a>
+                                <a href="#" class="fab fa-github"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Mentor 2 -->
+                <div class="mentor-card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="/asset/Vibha.png" alt="Mentor 2">
+                            <h3>Km. Vibha</h3>
+                            <p>SQL & Business Intelligence</p>
+                            <div class="social-icons">
+                                <a href="#" class="fab fa-linkedin"></a>
+                                <a href="#" class="fab fa-x"></a>
+                                <a href="#" class="fab fa-github"></a>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <p>Experienced Lead Engineer, Supporting mentees in thier mock interviews preparation.</p>
+                            <div class="social-icons">
+                                <a href="#" class="fab fa-linkedin"></a>
+                                <a href="#" class="fab fa-x"></a>
+                                <a href="#" class="fab fa-github"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Mentor 3 -->
+                <div class="mentor-card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="/asset/Kartikey.jpeg" alt="Mentor 3">
+                            <h3>Kartikey Baijal</h3>
+                            <p>Data Analytics/ Engineering</p>
+                            <div class="social-icons">
+                                <a href="#" class="fab fa-linkedin"></a>
+                                <a href="#" class="fab fa-x"></a>
+                                <a href="#" class="fab fa-github"></a>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <p>Expert Champion,helping mentees in their Tech-problems,Doubts and Career growth.</p>
+                            <div class="social-icons">
+                                <a href="#" class="fab fa-linkedin"></a>
+                                <a href="#" class="fab fa-x"></a>
+                                <a href="#" class="fab fa-github"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Mentor 4 -->
+                <div class="mentor-card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="/asset/asrar ahmad.png" alt="Mentor 4">
+                            <h3>Asrar</h3>
+                            <p>Placement Co-ordinator</p>
+                            <div class="social-icons">
+                                <a href="#" class="fab fa-linkedin"></a>
+                                <a href="#" class="fab fa-x"></a>
+                                <a href="#" class="fab fa-github"></a>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <p>Expert in Business advisory & Business Acumen with 8+ years of experience.</p>
+                            <div class="social-icons">
+                                <a href="#" class="fab fa-linkedin"></a>
+                                <a href="#" class="fab fa-x"></a>
+                                <a href="#" class="fab fa-github"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    <!-- Pricing -->
+    <section id = "unique-pricing-section" class="unique-pricing-section">
+        <!-- Pricing Section -->
+        <div class="unique-pricing-container">
+            <h4>PROGRAM FEE</h4>
+            <h2>Let's enroll!</h2>
+            <p class="discount">Limited time offer - 20% Off</p>
+            <div class="unique-price-box">
+                <h4>EMI Available!</h4>
+                <h3>₹4,576<span>/month</span></h3>
+                <p>Total amount <del>₹64,599</del> <strong>₹51,499</strong></p>
+            </div>
+            <p>Avail additional scholarship up to 10%. <a href="/private/Scholarship.html">Learn more</a></p>
+            <button class="unique-enroll-btn">Enroll Now</button>
+        </div>
+
+        <!-- Process Flow Section -->
+        <div class="unique-process-container">
+            <h3>Data is a new currency, that pays lifelong dividents.</h3>
+            <div class="unique-process-steps">
+                <div class="unique-line"></div>
+                <div class="unique-step active">
+                    <img src="/asset/Vibha.png" alt="User 1">
+                    <h5>Enroll in track</h5>
+                    <p>Kickstart your career</p>
+                </div>
+                <div class="unique-step">
+                    <img src="/asset/Durgesh-new.png" alt="User 2">
+                    <h5>Learn with experts</h5>
+                    <p>Mentored by the best</p>
+                </div>
+                <div class="unique-step">
+                    <img src="/asset/asrar ahmad.png" alt="User 3">
+                    <h5>Get placed</h5>
+                    <p>Next stop, dream job</p>
+                </div>
+                <div class="unique-step">
+                    <img src="/asset/Kartikey.jpeg" alt="User 4">
+                    <h5>Divident</h5>
+                    <p>Investment paid off in first salary</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    </main>
+    <script src="EndtoEndDataAnalytics.js"></script>
+</body>
+</html>
