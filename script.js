@@ -102,17 +102,40 @@ document.addEventListener("DOMContentLoaded", function () {
 
  
 
-// toggling the menu:
-document.addEventListener("DOMContentLoaded", function () {
-    const hamburger = document.querySelector(".hamburger");
-    const nav = document.querySelector("nav");
-
-    if (hamburger && nav) { // Ensure elements exist before adding event listener
-        hamburger.addEventListener("click", function () {
-            nav.classList.toggle("active"); // Toggle the class on nav, not nav-links
-        });
-    }
-});
+    document.addEventListener("DOMContentLoaded", function () {
+        const hamburger = document.querySelector(".hamburger");
+        const nav = document.querySelector("nav");
+    
+        if (!hamburger || !nav) return; // Exit if elements are missing
+    
+        // Function to toggle the menu
+        function toggleMenu() {
+            nav.classList.toggle("active");
+            document.body.classList.toggle("nav-open"); // Prevent scrolling when menu is open
+        }
+    
+        // Close menu when clicking outside
+        function closeMenuOnClickOutside(event) {
+            if (!nav.contains(event.target) && !hamburger.contains(event.target)) {
+                nav.classList.remove("active");
+                document.body.classList.remove("nav-open");
+            }
+        }
+    
+        // Close menu when pressing the Escape key
+        function closeMenuOnEscape(event) {
+            if (event.key === "Escape") {
+                nav.classList.remove("active");
+                document.body.classList.remove("nav-open");
+            }
+        }
+    
+        // Event listeners
+        hamburger.addEventListener("click", toggleMenu);
+        document.addEventListener("click", closeMenuOnClickOutside);
+        document.addEventListener("keydown", closeMenuOnEscape);
+    });
+    
 
 // FAQ
 function showAnswer(index) {

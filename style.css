@@ -12,8 +12,9 @@ body {
 }
 
 /* ---- HEADER ---- */
+
 header a{
-    text-decoration: none;
+ text-decoration: none;
 }
 /* ANNOUNCEMENT BAR - Fixed at Top */
 .announcement-bar {
@@ -99,25 +100,52 @@ header.shift-up {
 }
 
 /* Logo */
+/* Logo Container to keep logo & hamburger aligned */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Logo */
 .logo {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 10px;
     font-size: 1.5rem;
     font-weight: 700;
     color: purple;
+    text-decoration: none;
 }
 
-.logo div {
-    width: 60px;
+/* Hamburger Icon */
+.hamburger {
+    display: none; /* Hidden by default */
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 10px;
+}
+
+/* Show hamburger in mobile view */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+}
+
+
+.logo img{
+    width: 80px;
     aspect-ratio: 1;
     display: grid;
     place-content: center;
     font-size: 1.5rem;
-    color: #fff;
-    background-color: #3e0078;
     border-radius: 50%;
 }
+
+
 
 /* Navigation */
 nav ul {

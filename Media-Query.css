@@ -10,6 +10,7 @@
     border: none;
     font-size: 2rem;
     cursor: pointer;
+    margin-left: 20px;
     padding: 10px;
 }
 
@@ -351,4 +352,4 @@ Phone: top/botton*/
     /* Hide default menu icon */
     .menu-icon {
         display: none;
-    }
+    }}

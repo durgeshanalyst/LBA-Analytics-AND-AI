@@ -19,6 +19,15 @@ body {
     color: purple;
 }
 
+.logo img{
+    width: 60px;
+    aspect-ratio: 1;
+    display: grid;
+    place-content: center;
+    font-size: 1.5rem;
+    border-radius: 50%;
+}
+
 .navbar a {
     text-decoration: none; /* Removes underline */
 }
