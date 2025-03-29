@@ -14,7 +14,6 @@ function toggleMenu() {
     console.log("Menu toggled. Current classes:", navMenu.classList);
 }
 
-
 // Syllabus
 function toggleChapter(element) {
     let chapters = document.querySelectorAll('.chapter p');

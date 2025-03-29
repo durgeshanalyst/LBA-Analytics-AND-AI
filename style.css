@@ -1,3 +1,6 @@
+/* check on timer */
+
+
 * {
     margin: 0;
     padding: 0;
@@ -137,7 +140,7 @@ header.shift-up {
 
 
 .logo img{
-    width: 80px;
+    width: 60px;
     aspect-ratio: 1;
     display: grid;
     place-content: center;
@@ -690,8 +693,8 @@ footer {
 
 .social-icons {
     display: flex;
-    gap: 10px;
-    margin-top: 10px;
+    gap: 15px;
+    margin-top: 20px;
     margin-left: 25%;
 }
 

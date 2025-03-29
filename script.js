@@ -12,6 +12,36 @@ window.addEventListener('scroll', function () {
 });
 
 
+// javascrip for discout click stats card
+document.addEventListener("DOMContentLoaded", function () {
+    const statsCard = document.querySelector(".stats-card");
+    
+    if (statsCard) {
+        statsCard.addEventListener("click", function () {
+            window.location.href = "/Programs/Courses/EndtoEndDataAnalytics.html#unique-pricing-section";
+        });
+
+        // Optional: Change cursor to pointer to indicate clickability
+        statsCard.style.cursor = "pointer";
+    }
+});
+
+
+// redirecting Enroll now to pricng page batch
+document.addEventListener("DOMContentLoaded", function () {
+    const enrollButton = document.getElementById("nav-enroll");
+
+    if (enrollButton) {
+        enrollButton.addEventListener("click", function () {
+            window.location.href = "/Programs/Courses/EndtoEndDataAnalytics.html#unique-pricing-section";
+        });
+
+        // Optional: Change cursor to pointer for better UX
+        enrollButton.style.cursor = "pointer";
+    }
+});
+
+
 // Program
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -54,27 +84,55 @@ document.addEventListener("DOMContentLoaded", function () {
 // Timer Countdown
 document.addEventListener("DOMContentLoaded", function () {
     function startCountdown(hours) {
-        let time = hours * 60 * 60; // Convert hours to seconds
         const timerElement = document.getElementById("timer");
+        const progressBar = document.getElementById("progress");
+        const offerElement = document.getElementById("offer");
+        
+        let endTime = localStorage.getItem("countdownEndTime");
+        if (!endTime) {
+            endTime = Date.now() + hours * 60 * 60 * 1000; // Set expiry time
+            localStorage.setItem("countdownEndTime", endTime);
+        } else {
+            endTime = parseInt(endTime);
+        }
 
         function updateTimer() {
-            const displayHours = Math.floor(time / 3600);
-            const displayMinutes = Math.floor((time % 3600) / 60);
-            const displaySeconds = time % 60;
+            const now = Date.now();
+            let timeLeft = Math.max(0, Math.floor((endTime - now) / 1000));
+            
+            const displayHours = Math.floor(timeLeft / 3600);
+            const displayMinutes = Math.floor((timeLeft % 3600) / 60);
+            const displaySeconds = timeLeft % 60;
 
             timerElement.textContent = `${displayHours.toString().padStart(2, '0')}:${displayMinutes.toString().padStart(2, '0')}:${displaySeconds.toString().padStart(2, '0')}`;
-            if (time > 0) {
-                time--;
-                setTimeout(updateTimer, 1000);
+            
+            // Update progress bar
+            const percentage = ((hours * 60 * 60 - timeLeft) / (hours * 60 * 60)) * 100;
+            progressBar.style.width = `${percentage}%`;
+
+            // Dynamic Discount Updates
+            if (timeLeft > 18 * 60 * 60) {
+                offerElement.textContent = "🔥 20% OFF - Enroll Now!";
+            } else if (timeLeft > 12 * 60 * 60) {
+                offerElement.textContent = "⚡ 15% OFF - Limited Time!";
+            } else if (timeLeft > 6 * 60 * 60) {
+                offerElement.textContent = "✨ 10% OFF - Hurry Up!";
             } else {
-                time = 6 * 60 * 60;
-                setTimeout(updateTimer, 1000);
+                offerElement.textContent = "⏳ Last Chance! Enroll Now!";
+            }
+
+            if (timeLeft <= 0) {
+                clearInterval(timerInterval);
+                localStorage.removeItem("countdownEndTime");
+                window.location.href = "https://letsbeanalyst.com/enrollment-closed";
             }
         }
+        
+        const timerInterval = setInterval(updateTimer, 1000);
         updateTimer();
     }
 
-    startCountdown(6); // Start countdown from 6 hours
+    startCountdown(24); 
 });
 
 
