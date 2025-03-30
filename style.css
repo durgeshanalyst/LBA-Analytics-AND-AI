@@ -170,7 +170,6 @@ nav ul li a {
 nav ul li a:hover {
     color: #3e0078;
 }
-
 /* Buttons */
 .btn {
     padding: 10px 20px;
@@ -818,7 +817,7 @@ footer {
     background: white;
     border: 2px solid #ddd;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    z-index: 100;
+    z-index: 10;
 }
 
 /* Show iframe when hovering on Programs */
@@ -1043,3 +1042,5 @@ footer {
     to { opacity: 1; transform: translateY(0); }
 }
 /* FAQ end */
+
+

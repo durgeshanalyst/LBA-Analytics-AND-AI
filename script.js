@@ -158,41 +158,44 @@ document.addEventListener("DOMContentLoaded", function () {
         element.querySelector(".arrow-icon").style.display = "inline-block";
     }
 
- 
+    
+//  hamburegr toggle
+// Toggle Menu for Mobile View
+function toggleMenu() {
+    const nav = document.querySelector("nav");
+    nav.classList.toggle("active");
 
-    document.addEventListener("DOMContentLoaded", function () {
-        const hamburger = document.querySelector(".hamburger");
-        const nav = document.querySelector("nav");
-    
-        if (!hamburger || !nav) return; // Exit if elements are missing
-    
-        // Function to toggle the menu
-        function toggleMenu() {
-            nav.classList.toggle("active");
-            document.body.classList.toggle("nav-open"); // Prevent scrolling when menu is open
-        }
-    
-        // Close menu when clicking outside
-        function closeMenuOnClickOutside(event) {
-            if (!nav.contains(event.target) && !hamburger.contains(event.target)) {
-                nav.classList.remove("active");
-                document.body.classList.remove("nav-open");
-            }
-        }
-    
-        // Close menu when pressing the Escape key
-        function closeMenuOnEscape(event) {
-            if (event.key === "Escape") {
-                nav.classList.remove("active");
-                document.body.classList.remove("nav-open");
-            }
-        }
-    
-        // Event listeners
-        hamburger.addEventListener("click", toggleMenu);
-        document.addEventListener("click", closeMenuOnClickOutside);
-        document.addEventListener("keydown", closeMenuOnEscape);
+    // Hide the dropdown when toggling the menu
+    document.querySelectorAll(".dropdown-content").forEach((content) => {
+        content.style.display = "none";
     });
+}
+
+// Toggle Dropdown Functionality
+function toggleDropdown(event) {
+    event.stopPropagation(); // Prevents click from propagating to the document body
+    const dropdown = event.currentTarget.querySelector(".dropdown-content");
+
+    // Close other open dropdowns before opening the current one
+    document.querySelectorAll(".dropdown-content").forEach((content) => {
+        if (content !== dropdown) {
+            content.style.display = "none";
+        }
+    });
+
+    // Toggle the current dropdown
+    dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+}
+
+// Close dropdown when clicking outside
+document.addEventListener("click", function (event) {
+    if (!event.target.closest(".dropdown")) {
+        document.querySelectorAll(".dropdown-content").forEach((content) => {
+            content.style.display = "none";
+        });
+    }
+});
+
     
 
 // FAQ
@@ -219,8 +222,14 @@ document.addEventListener("DOMContentLoaded", function () {
         closeBtn.addEventListener("click", function () {
             announcementBar.classList.add("hidden"); // Hide announcement bar
             header.classList.add("shift-up"); // Move navbar up
+            
+            // Wait for transition to complete, then remove it from layout
+            setTimeout(() => {
+                announcementBar.style.display = "none";
+            }, 300); // Adjust delay to match CSS transition
         });
     }
 });
+
 
 

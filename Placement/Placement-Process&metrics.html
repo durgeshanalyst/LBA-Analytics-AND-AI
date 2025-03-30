@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placement - Letsbeanalyst</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="placement-process.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet">
+        <link rel="icon" href="/asset/LBA.png" type="image/svg+xml">
+        <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body class="bg-gray-100 p-6">
+    <header>
+        <nav class="navbar">
+            <a href="../../index.html">
+            <div class="logo" >
+                    <img src="/asset/LBA.png" alt="logo">
+                Analytics & AI
+            </div>
+        </a>
+             <!-- Custom Hamburger Menu (Only One Toggle Button) -->
+             <div class="custom-menu" onclick="toggleMenu()">
+                <span class="line short"></span>
+                <span class="line long"></span>
+                <span class="line medium"></span>
+                <span class="line longest"></span>
+            </div>
+            <ul id="nav-menu">
+                <li class="dropdown" onclick="toggleDropdown(event)">
+                    <a href="#">Programs</a>
+                    <span class="expand-icon">▼</span>
+                    <div class="dropdown-content">
+                        <iframe src="/Courses.html"></iframe>
+                    </div>
+                </li>
+                <li><a href="/Blog.htm">Blogs</a></li>
+                <li><a href="/Opportunity/AllOpportunity.html">Work with US</a></li>
+                <li><a href="#"></a></li>
+            </ul>
+    
+            <div class="nav-buttons">
+                <button class="btn">Explore Program</button>
+            </div>
+        </nav>
+    </header>
+    
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">Transform Your Career with <span>Data Analytics</span></h1>
+            <p class="hero-description">
+                Learn industry-relevant skills and secure high-paying jobs with our structured learning roadmap.
+            </p>
+            <button class="hero-btn" id="hero-btn">Enroll Now</button>
+        </div>
+        <img src="/asset/placement-champs.png" alt="Hero Image" class="hero-image">
+    </section>
+    
+    
+    <section class="stats">
+        <div class="stat">
+            <i class="fas fa-user-graduate"></i>
+            <h2>500+</h2>
+            <p>Mentees Placed</p>
+        </div>
+        <div class="stat">
+            <i class="fas fa-building"></i>
+            <h2>200+</h2>
+            <p>Hiring Partners</p>
+        </div>
+        <div class="stat">
+            <i class="fas fa-chart-line"></i>
+            <h2>98%</h2>
+            <p>Success Rate</p>
+        </div>
+    </section>
+    
+    
+    <section class="placement-process">
+        <h2 class="text-3xl font-bold text-center text-[#3e0078] mb-6">How We Place Our Mentees</h2>
+        <div class="steps">
+            <div class="step">
+                <i class="fas fa-chalkboard-teacher"></i>
+                <h3>Training</h3>
+                <p>Expert-led structured training to upskill.</p>
+            </div>
+            <div class="step">
+                <i class="fas fa-laptop-code"></i>
+                <h3>Live Projects</h3>
+                <p>Hands-on projects to gain real experience.</p>
+            </div>
+            <div class="step">
+                <i class="fas fa-comments"></i>
+                <h3>Mock Interviews</h3>
+                <p>Interview preparation with feedback.</p>
+            </div>
+            <div class="step">
+                <i class="fas fa-user-friends"></i>
+                <h3>Networking</h3>
+                <p>Connect with hiring managers & alumni.</p>
+            </div>
+            <div class="step">
+                <i class="fas fa-briefcase"></i>
+                <h3>Job Placement</h3>
+                <p>Get placed with top hiring partners.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section>
+        <h2 class="text-3xl font-bold text-center text-[#3e0078] mb-6">Success Stories</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            <!-- Success Card -->
+            <div class="bg-white p-6 rounded-2xl shadow-lg text-center relative">
+                <div class="animated-badge">Non-it → IT</div>
+                <img src="/asset/Lipika-Gupta.jpg" alt="Lipika Gupta" class="profile-img mx-auto" />
+                <h3 class="text-xl font-semibold text-[#3e0078]">Lipika Gupta</h3>
+                <p class="text-sm font-medium text-gray-600">Data Analyst at Wipro</p>
+                <div class="company-container">
+                    <img src="/asset/Byjus.png" alt="Byjulogo" class="company-logo" />
+                    <span class="animated-line"></span>
+                    <img src="/asset/Target.png" alt="Target" class="company-logo" />
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl shadow-lg text-center relative">
+                <div class="animated-badge">Non-IT to IT</div>
+                <img src="/asset/Aditya Suram.jpg" alt="Aditya Suram" class="profile-img mx-auto" />
+                <h3 class="text-xl font-semibold text-[#3e0078]">Aditya Suram</h3>
+                <p class="text-sm font-medium text-gray-600">Business Analyst at Capgemini</p>
+                <div class="company-container">
+                    <img src="/asset/Systools.jpg" alt="Systools" class="company-logo" />
+                    <span class="animated-line"></span>
+                    <img src="/asset/RBL_Bank_SVG_Logo.svg.png" alt="RBL" class="company-logo" />
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl shadow-lg text-center relative">
+                <div class="animated-badge">SQL Specialist</div>
+                <img src="/asset/Hanumanth-Karthik.jpg" alt="Hanumanth Karthik" class="profile-img mx-auto" />
+                <h3 class="text-xl font-semibold text-[#3e0078]">Hanumanth Karthik</h3>
+                <p class="text-sm font-medium text-gray-600">SQL Developer at Infosys</p>
+                <div class="company-container">
+                    <img src="/asset/capgemini.png" alt=Capgemini" class="company-logo" />
+                    <span class="animated-line"></span>
+                    <img src="/asset/ANZ-Logo.png" alt="ANZ" class="company-logo" />
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl shadow-lg text-center relative">
+                <div class="animated-badge">Data Analyst</div>
+                <img src="/asset/Muddit Gupta.jpg" alt="Muddit Gupta" class="profile-img mx-auto" />
+                <h3 class="text-xl font-semibold text-[#3e0078]">Muddit Gupta</h3>
+                <p class="text-sm font-medium text-gray-600">Data Analyst at TCS</p>
+                <div class="company-container">
+                    <img src="/asset/emerson.jpg" class="company-logo" />
+                    <span class="animated-line"></span>
+                    <img src="/asset/itechnolabs.webp" alt="HCL" class="company-logo" />
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <script src="placement-process.js" ></script>
+</body>
+</html>
