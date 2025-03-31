@@ -26,7 +26,7 @@ header a{
     background-size: 200% 100%;
     color: white;
     text-align: center;
-    padding: 12px 20px;
+    padding: 12px 15px;
     font-size: 16px;
     display: flex;
     justify-content: center;
@@ -118,6 +118,16 @@ header.shift-up {
     font-size: 1.5rem;
     font-weight: 700;
     color: purple;
+    text-decoration: none;
+}
+
+.f-logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
     text-decoration: none;
 }
 

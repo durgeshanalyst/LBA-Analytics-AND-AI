@@ -1,61 +1,69 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LetsBeAnalyst</title>
-    <meta name="title" content="LetsBeAnalyst">
-    <meta name="description" content="Best Platform to get solution for yourself.">
-    <!-- 
-      - google font link
-    -->
+    <title>LBA Analytics and AI</title>
+    <meta name="description" content="India's best online training providers for Data Analytics, Data Engineering, SQL, Python, Machine Learning, Long Term Mentorship, and Project Solutions.">
+    
+    <link rel="icon" href="/asset/LBA.png" type="image/png">
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet">
-      <link rel="stylesheet" href="style.css">
-      <link rel="stylesheet" href="Media-Query.css">
-      <link rel="stylesheet" href="blog.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
- <!-- Announcement Bar -->
- <div class="announcement-bar" id="announcementBar">
-    <span class="announcement-text">
-      <img src="asset/Best.png" alt="Image">Empowering Future Data Analysts – Upskill, Transform, and Succeed with <strong>Letsbeanalyst!</strong>
-    </span>
-    <a href="your-link-here" class="announcement-btn">Know More<span class="arrow">→</span></a>
+    
+    <!-- External Stylesheets -->
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="blogs.css">
+    <link rel="stylesheet" href="/Media-Query.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
-    <button class="close-btn" onclick="closeBanner()">✖</button>
-</div>
+</head>
+<body>
+
+    <!-- Announcement Bar -->
+    <div class="announcement-bar" id="announcementBar">
+        <span class="announcement-text">
+            <img src="/asset/Best.png" alt="Best Training"> Empowering Future Data Analysts – Upskill, Transform, and Succeed with <strong>Letsbeanalyst!</strong>
+        </span>
+        <a href="#" class="announcement-btn">Know More <span class="arrow">→</span></a>
+        <button class="close-btn" onclick="closeBanner()">✖</button>
+    </div>
+
+    <!-- Header -->
     <header>
-            <div class="logo" >
-                <div>LBA</div>
+        <div class="logo-container">
+            <a href="/Index.html" class="logo">
+                <img src="/asset/LBA.png" alt="LBA Logo">
                 Analytics & AI
-                <!-- <div class="nav-container"> -->
-                <button class="hamburger">Ξ</button>
-            </div>
-        </a>
-        <!-- Hamburger Menu -->
-        
+            </a>
+            <div class="custom-menu" onclick="toggleMenu()">
+                <span class="line short"></span>
+                <span class="line long"></span>
+                <span class="line medium"></span>
+                <span class="line longest"></span>
+            </div> 
+        </div>
+
+        <!-- Navigation -->
         <nav>
             <ul class="nav-links">
                 <li class="dropdown" onclick="toggleDropdown(event)">
                     <a href="#">Programs</a>
                     <span class="expand-icon">▼</span>
                     <div class="dropdown-content">
-                        <iframe src="Courses.html"></iframe>
+                        <iframe src="/Courses.html"></iframe>
                     </div>
                 </li>
-                <li><a href="#">Placements</a></li>
-                <li><a href="/Blog.htm">Blogs</a></li>
+                <li><a href="/Placement/Placement-Process&metrics.html">Placements</a></li>
+                <li><a href="/Blogs/Blog.htm">Blogs</a></li>
                 <li><a href="#">Hire From Us</a></li>
                 <li><a href="/Opportunity/AllOpportunity.html">Work with Us</a></li>
             </ul>
         </nav>
-    
-        
-        <button class="btn explore-btn" id="nav-enroll">Enroll Now</button>
-    </header>   
-<body>
+        <button  class="btn explore-btn" id="nav-enroll">Enroll Now</button>
+    </header>
     <div class="horizontal-blog-container">
         <h2>Latest Blogs</h2>
         <div class="horizontal-blog-list">
@@ -85,6 +93,8 @@
             </div>
         </div>
     </div>
-    <script src="script.js"></script>
+<script src="/script.js"></script>
+
+
 </body>
 </html>

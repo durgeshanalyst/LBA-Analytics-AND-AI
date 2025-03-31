@@ -1,235 +1,199 @@
 // Smooth Scroll for "Explore More" Button
-document.querySelector('.explore-btn').addEventListener('click', function () {
-    window.scrollTo({
-        top: document.body.scrollHeight,
-        behavior: 'smooth'
-    });
+document.addEventListener("DOMContentLoaded", function () {
+    const exploreBtn = document.querySelector('.explore-btn');
+    if (exploreBtn) {
+        exploreBtn.addEventListener('click', function () {
+            window.scrollTo({
+                top: document.body.scrollHeight,
+                behavior: 'smooth'
+            });
+        });
+    }
 });
 
 // Navbar Highlight on Scroll
 window.addEventListener('scroll', function () {
-    document.querySelector('header').classList.toggle('sticky', window.scrollY > 50);
+    const header = document.querySelector('header');
+    if (header) {
+        header.classList.toggle('sticky', window.scrollY > 50);
+    }
 });
 
-
-// javascrip for discout click stats card
+// Discount Click Stats Card
 document.addEventListener("DOMContentLoaded", function () {
     const statsCard = document.querySelector(".stats-card");
-    
     if (statsCard) {
         statsCard.addEventListener("click", function () {
             window.location.href = "/Programs/Courses/EndtoEndDataAnalytics.html#unique-pricing-section";
         });
-
-        // Optional: Change cursor to pointer to indicate clickability
         statsCard.style.cursor = "pointer";
     }
 });
 
-
-// redirecting Enroll now to pricng page batch
+// Redirecting "Enroll Now" to Pricing Page
 document.addEventListener("DOMContentLoaded", function () {
     const enrollButton = document.getElementById("nav-enroll");
-
     if (enrollButton) {
         enrollButton.addEventListener("click", function () {
             window.location.href = "/Programs/Courses/EndtoEndDataAnalytics.html#unique-pricing-section";
         });
-
-        // Optional: Change cursor to pointer for better UX
         enrollButton.style.cursor = "pointer";
     }
 });
 
-
-// Program
-
+// Program Dropdown
 document.addEventListener("DOMContentLoaded", function () {
-    let dropdown = document.querySelector(".dropdown");
-    let dropdownContent = document.querySelector(".dropdown-content");
-    let closeTimeout; // Holds the timeout for closing
+    const dropdown = document.querySelector(".dropdown");
+    const dropdownContent = document.querySelector(".dropdown-content");
+    let closeTimeout;
 
-    if (!dropdown || !dropdownContent) return;
+    if (dropdown && dropdownContent) {
+        dropdown.addEventListener("mouseenter", function () {
+            clearTimeout(closeTimeout);
+            dropdownContent.style.display = "block";
+        });
 
-    // Show dropdown when hovering over the button
-    dropdown.addEventListener("mouseenter", function () {
-        clearTimeout(closeTimeout); // Cancel closing if triggered
-        dropdownContent.style.display = "block";
-    });
+        dropdownContent.addEventListener("mouseenter", function () {
+            clearTimeout(closeTimeout);
+            dropdownContent.style.display = "block";
+        });
 
-    // Keep it open when hovering inside the dropdown
-    dropdownContent.addEventListener("mouseenter", function () {
-        clearTimeout(closeTimeout); // Cancel closing if triggered
-        dropdownContent.style.display = "block";
-    });
+        dropdown.addEventListener("mouseleave", function () {
+            closeTimeout = setTimeout(() => {
+                dropdownContent.style.display = "none";
+            }, 300);
+        });
 
-    // Delay closing when leaving both button & content
-    dropdown.addEventListener("mouseleave", function () {
-        closeTimeout = setTimeout(() => {
-            dropdownContent.style.display = "none";
-        }, 300); // Short delay to allow smooth transition
-    });
-
-    dropdownContent.addEventListener("mouseleave", function () {
-        closeTimeout = setTimeout(() => {
-            dropdownContent.style.display = "none";
-        }, 300); // Short delay to allow smooth transition
-    });
+        dropdownContent.addEventListener("mouseleave", function () {
+            closeTimeout = setTimeout(() => {
+                dropdownContent.style.display = "none";
+            }, 300);
+        });
+    }
 });
-
-
-
-
 
 // Timer Countdown
 document.addEventListener("DOMContentLoaded", function () {
-    function startCountdown(hours) {
-        const timerElement = document.getElementById("timer");
-        const progressBar = document.getElementById("progress");
-        const offerElement = document.getElementById("offer");
-        
-        let endTime = localStorage.getItem("countdownEndTime");
-        if (!endTime) {
-            endTime = Date.now() + hours * 60 * 60 * 1000; // Set expiry time
-            localStorage.setItem("countdownEndTime", endTime);
-        } else {
-            endTime = parseInt(endTime);
-        }
+    const timerElement = document.getElementById("timer");
+    const progressBar = document.getElementById("progress");
+
+    if (!timerElement || !progressBar) return; // Prevents errors if missing
+
+    function startCountdown() {
+        let endTime = new Date("2025-04-10T23:59:59").getTime();
 
         function updateTimer() {
-            const now = Date.now();
+            let now = new Date().getTime();
             let timeLeft = Math.max(0, Math.floor((endTime - now) / 1000));
-            
-            const displayHours = Math.floor(timeLeft / 3600);
-            const displayMinutes = Math.floor((timeLeft % 3600) / 60);
-            const displaySeconds = timeLeft % 60;
 
-            timerElement.textContent = `${displayHours.toString().padStart(2, '0')}:${displayMinutes.toString().padStart(2, '0')}:${displaySeconds.toString().padStart(2, '0')}`;
-            
-            // Update progress bar
-            const percentage = ((hours * 60 * 60 - timeLeft) / (hours * 60 * 60)) * 100;
+            let displayDays = Math.floor(timeLeft / (24 * 3600));
+            let displayHours = Math.floor((timeLeft % (24 * 3600)) / 3600);
+            let displayMinutes = Math.floor((timeLeft % 3600) / 60);
+            let displaySeconds = timeLeft % 60;
+
+            timerElement.textContent = `${displayDays}d ${displayHours.toString().padStart(2, '0')}:${displayMinutes.toString().padStart(2, '0')}:${displaySeconds.toString().padStart(2, '0')}`;
+
+            let totalSeconds = (endTime - new Date("2025-03-31T00:00:00").getTime()) / 1000;
+            let percentage = ((totalSeconds - timeLeft) / totalSeconds) * 100;
             progressBar.style.width = `${percentage}%`;
-
-            // Dynamic Discount Updates
-            if (timeLeft > 18 * 60 * 60) {
-                offerElement.textContent = "🔥 20% OFF - Enroll Now!";
-            } else if (timeLeft > 12 * 60 * 60) {
-                offerElement.textContent = "⚡ 15% OFF - Limited Time!";
-            } else if (timeLeft > 6 * 60 * 60) {
-                offerElement.textContent = "✨ 10% OFF - Hurry Up!";
-            } else {
-                offerElement.textContent = "⏳ Last Chance! Enroll Now!";
-            }
 
             if (timeLeft <= 0) {
                 clearInterval(timerInterval);
-                localStorage.removeItem("countdownEndTime");
-                window.location.href = "https://letsbeanalyst.com/enrollment-closed";
+                timerElement.textContent = "Offer Expired";
+                progressBar.style.width = "100%";
             }
         }
-        
+
         const timerInterval = setInterval(updateTimer, 1000);
         updateTimer();
     }
 
-    startCountdown(24); 
+    startCountdown();
 });
 
+// Program Switcher
+function switchTab(tabId, element) {
+    const tabContent = document.getElementById(tabId);
+    if (!tabContent) return; // Avoid error if missing
 
-// Program switcher
+    document.querySelectorAll(".tab-content").forEach(tab => {
+        tab.classList.remove("active");
+    });
 
-    function switchTab(tabId, element) {
-        // Hide all tab content
-        document.querySelectorAll(".tab-content").forEach(tab => {
-            tab.classList.remove("active");
-        });
+    tabContent.classList.add("active");
 
-        // Show the selected tab content
-        document.getElementById(tabId).classList.add("active");
+    document.querySelectorAll(".tab-button").forEach(button => {
+        button.classList.remove("active");
+        const arrowIcon = button.querySelector(".arrow-icon");
+        if (arrowIcon) arrowIcon.style.display = "none";
+    });
 
-        // Remove active class from all buttons and hide arrows
-        document.querySelectorAll(".tab-button").forEach(button => {
-            button.classList.remove("active");
-            button.querySelector(".arrow-icon").style.display = "none";
-        });
+    element.classList.add("active");
+    const arrowIcon = element.querySelector(".arrow-icon");
+    if (arrowIcon) arrowIcon.style.display = "inline-block";
+}
 
-        // Add active class to the clicked button and show the arrow
-        element.classList.add("active");
-        element.querySelector(".arrow-icon").style.display = "inline-block";
-    }
-
-    
-//  hamburegr toggle
-// Toggle Menu for Mobile View
+// Hamburger Toggle
 function toggleMenu() {
     const nav = document.querySelector("nav");
-    nav.classList.toggle("active");
-
-    // Hide the dropdown when toggling the menu
-    document.querySelectorAll(".dropdown-content").forEach((content) => {
-        content.style.display = "none";
-    });
+    if (nav) {
+        nav.classList.toggle("active");
+        document.querySelectorAll(".dropdown-content").forEach(content => {
+            content.style.display = "none";
+        });
+    }
 }
 
 // Toggle Dropdown Functionality
 function toggleDropdown(event) {
-    event.stopPropagation(); // Prevents click from propagating to the document body
+    event.stopPropagation();
     const dropdown = event.currentTarget.querySelector(".dropdown-content");
 
-    // Close other open dropdowns before opening the current one
-    document.querySelectorAll(".dropdown-content").forEach((content) => {
-        if (content !== dropdown) {
-            content.style.display = "none";
-        }
-    });
+    if (dropdown) {
+        document.querySelectorAll(".dropdown-content").forEach(content => {
+            if (content !== dropdown) content.style.display = "none";
+        });
 
-    // Toggle the current dropdown
-    dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+        dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+    }
 }
 
 // Close dropdown when clicking outside
 document.addEventListener("click", function (event) {
     if (!event.target.closest(".dropdown")) {
-        document.querySelectorAll(".dropdown-content").forEach((content) => {
+        document.querySelectorAll(".dropdown-content").forEach(content => {
             content.style.display = "none";
         });
     }
 });
 
-    
-
-// FAQ
+// FAQ Toggle
 function showAnswer(index) {
     const answer = document.getElementById(`answer-${index}`);
-    
-    // Toggle the 'show' class
-    if (answer.classList.contains("show")) {
-        answer.classList.remove("show");
-    } else {
-        // Hide all other answers before showing the selected one
-        document.querySelectorAll(".answer").forEach(ans => ans.classList.remove("show"));
-        answer.classList.add("show");
+    if (answer) {
+        if (answer.classList.contains("show")) {
+            answer.classList.remove("show");
+        } else {
+            document.querySelectorAll(".answer").forEach(ans => ans.classList.remove("show"));
+            answer.classList.add("show");
+        }
     }
 }
 
-// Announcement bar hide and shift up
+// Announcement Bar Hide & Shift Up
 document.addEventListener("DOMContentLoaded", function () {
     const announcementBar = document.querySelector(".announcement-bar");
     const closeBtn = document.querySelector(".close-btn");
     const header = document.querySelector("header");
 
-    if (closeBtn) {
+    if (closeBtn && announcementBar && header) {
         closeBtn.addEventListener("click", function () {
-            announcementBar.classList.add("hidden"); // Hide announcement bar
-            header.classList.add("shift-up"); // Move navbar up
+            announcementBar.classList.add("hidden");
+            header.classList.add("shift-up");
             
-            // Wait for transition to complete, then remove it from layout
             setTimeout(() => {
                 announcementBar.style.display = "none";
-            }, 300); // Adjust delay to match CSS transition
+            }, 300);
         });
     }
 });
-
-
-
