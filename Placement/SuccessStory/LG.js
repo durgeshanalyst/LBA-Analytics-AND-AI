@@ -1,46 +1,3 @@
-// Smooth Scroll for "Explore More" Button
-document.addEventListener("DOMContentLoaded", function () {
-    const exploreBtn = document.querySelector('.explore-btn');
-    if (exploreBtn) {
-        exploreBtn.addEventListener('click', function () {
-            window.scrollTo({
-                top: document.body.scrollHeight,
-                behavior: 'smooth'
-            });
-        });
-    }
-});
-
-// Navbar Highlight on Scroll
-window.addEventListener('scroll', function () {
-    const header = document.querySelector('header');
-    if (header) {
-        header.classList.toggle('sticky', window.scrollY > 50);
-    }
-});
-
-// Discount Click Stats Card
-document.addEventListener("DOMContentLoaded", function () {
-    const statsCard = document.querySelector(".stats-card");
-    if (statsCard) {
-        statsCard.addEventListener("click", function () {
-            window.location.href = "/Programs/Courses/EndtoEndDataAnalytics.html#unique-pricing-section";
-        });
-        statsCard.style.cursor = "pointer";
-    }
-});
-
-// Redirecting "Enroll Now" to Pricing Page
-document.addEventListener("DOMContentLoaded", function () {
-    const enrollButton = document.getElementById("nav-enroll");
-    if (enrollButton) {
-        enrollButton.addEventListener("click", function () {
-            window.location.href = "/Programs/Courses/EndtoEndDataAnalytics.html#unique-pricing-section";
-        });
-        enrollButton.style.cursor = "pointer";
-    }
-});
-
 // Program Dropdown
 document.addEventListener("DOMContentLoaded", function () {
     const dropdown = document.querySelector(".dropdown");
@@ -131,7 +88,6 @@ function switchTab(tabId, element) {
     const arrowIcon = element.querySelector(".arrow-icon");
     if (arrowIcon) arrowIcon.style.display = "inline-block";
 }
-
 // Hamburger Toggle
 function toggleMenu() {
     const nav = document.querySelector("nav");
@@ -162,37 +118,6 @@ document.addEventListener("click", function (event) {
     if (!event.target.closest(".dropdown")) {
         document.querySelectorAll(".dropdown-content").forEach(content => {
             content.style.display = "none";
-        });
-    }
-});
-
-// FAQ Toggle
-function showAnswer(index) {
-    const answer = document.getElementById(`answer-${index}`);
-    if (answer) {
-        if (answer.classList.contains("show")) {
-            answer.classList.remove("show");
-        } else {
-            document.querySelectorAll(".answer").forEach(ans => ans.classList.remove("show"));
-            answer.classList.add("show");
-        }
-    }
-}
-
-// Announcement Bar Hide & Shift Up
-document.addEventListener("DOMContentLoaded", function () {
-    const announcementBar = document.querySelector(".announcement-bar");
-    const closeBtn = document.querySelector(".close-btn");
-    const header = document.querySelector("header");
-
-    if (closeBtn && announcementBar && header) {
-        closeBtn.addEventListener("click", function () {
-            announcementBar.classList.add("hidden");
-            header.classList.add("shift-up");
-            
-            setTimeout(() => {
-                announcementBar.style.display = "none";
-            }, 300);
         });
     }
 });
