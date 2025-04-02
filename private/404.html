@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #ffffff;
+            padding: 50px;
+            color: #333;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+        .message {
+            max-width: 600px;
+            text-align: left;
+        }
+        h1 {
+            font-size: 36px;
+            font-weight: bold;
+            color: #000;
+        }
+        p {
+            font-size: 18px;
+            color: #666;
+        }
+        a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+        .error-icon {
+            width: 150px;
+            height: 150px;
+            background-color: #dceee8;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 50px;
+            font-weight: bold;
+            color: #008060;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <img src="/asset/LBA.png" alt="Logo" width="100">
+    </div>
+    <div class="container">
+        <div class="message">
+            <h1>Sorry!</h1>
+            <h2>We can't seem to find the resource you're looking for.</h2>
+            <p>Please check that the website address is spelled correctly.</p>
+            <p>Or go to our <a href="index.html">home page</a> and use the menu to navigate to a specific section.</p>
+        </div>
+        <div class="error-icon">
+            404
+        </div>
+    </div>
+</body>
+</html>
