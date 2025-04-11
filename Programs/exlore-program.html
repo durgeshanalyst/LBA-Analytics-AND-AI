@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JY3PZ8SD2K"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-JY3PZ8SD2K');
+    </script>
+
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+    <!-- Google tag -->
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-TJ6L4ND7');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Best placement records for Fresher, Carrer Gap and Non-It People.">
+
+    <title>Explore-Program</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="explore-program.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="/asset/LBA.png" type="image/svg+xml">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="bg-gray-100 p-6">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TJ6L4ND7" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <header>
+        <nav class="navbar">
+            <a href="../../index.html">
+                <div class="logo">
+                    <img src="/asset/LBA.png" alt="logo">
+                    Analytics & AI
+                </div>
+            </a>
+            <!-- Custom Hamburger Menu (Only One Toggle Button) -->
+            <div class="custom-menu" onclick="toggleMenu()">
+                <span class="line short"></span>
+                <span class="line long"></span>
+                <span class="line medium"></span>
+                <span class="line longest"></span>
+            </div>
+            <ul id="nav-menu">
+                <li class="dropdown" onclick="toggleDropdown(event)">
+                    <a href="#">Programs</a>
+                    <span class="expand-icon">▼</span>
+                    <div class="dropdown-content">
+                        <iframe src="/Courses.html"></iframe>
+                    </div>
+                </li>
+                <li><a href="/Blogs/Blogs.htm">Blogs</a></li>
+                <li><a href="/Opportunity/AllOpportunity.html">Work with US</a></li>
+                <li><a href="#"></a></li>
+            </ul>
+
+            <div class="nav-buttons">
+                <a href="https://topmate.io/durgeshanalyst/1047161"><button class="btn">Free Trial</button></a>
+            </div>
+        </nav>
+</header>
+        <section class="container mx-auto px-4 py-28">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Course Template -->
+                <script>
+                 const courses = [
+    {
+        img: '/asset/1to1.png',
+        title: '1:1 Mentorship',
+        enrollments: '1.2k+',
+        projects: 5,
+        duration: '1 Month',
+        description: 'Personalized mentorship to guide your career path.',
+        link: '/Programs/PersonalCoaching/1to1Mentorship.html',
+         limitedSeats: true,
+        offer: '20% Off'
+
+    },
+    {
+        img: '/asset/Da1.png',
+        title: 'End to End Data Analytics',
+        enrollments: '3k+',
+        projects: 7,
+        duration: '3 Months',
+        description: 'Master Data Analytics with hands-on projects & tools.',
+        link: '/Programs/Courses/EndToEndDataAnalytics.html',
+         limitedSeats: true,
+        offer: '55% Off'
+    },
+    {
+        img: '/asset/Resume Building.png',
+        title: 'ATS Resume Building',
+        enrollments: '2.5k+',
+        projects: 6,
+        duration: '2 Weeks',
+        description: 'Build ATS-friendly resumes to increase shortlisting.',
+         limitedSeats: false,
+        offer: '20% Off'
+    },
+    {
+        img: '/asset/interview.png',
+        title: 'Mock Interviews',
+        enrollments: '1.8k+',
+        projects: 4,
+        duration: '1 Week',
+        description: 'Ace interviews with real-time mock sessions & expert feedback.',
+         limitedSeats: false,
+        offer: '20% Off'
+    },
+    {
+        img: '/asset/Career CAtalyst.png',
+        title: 'Career Catalyst',
+        enrollments: '2.2k+',
+        projects: 5,
+        duration: '6 Weeks',
+        description: 'Strategic sessions to shape your career goals.',
+         limitedSeats: true,
+        offer: '20% Off'
+    },
+    {
+        img: '/asset/Bootcamp.png',
+        title: 'Bootcamp',
+        enrollments: '3.5k+',
+        projects: 8,
+        duration: '2 Months',
+        description: 'Intensive bootcamp to make you job-ready.',
+         limitedSeats: false,
+        offer: '20% Off'
+    }
+];
+
+                    document.write(courses.map(course => `
+                        <div class="course-card bg-white p-6 rounded-lg shadow-lg" data-sr>
+                            <div class="enrollment text-center text-sm bg-gray-200 py-1 px-3 rounded-full">${course.enrollments} enrollments</div>
+                            <div class="flex items-center justify-between mt-4">
+                                <img src="${course.img}" alt="${course.title}" class="w-16 h-16 rounded-lg">
+                                <div class="text-right space-y-1">
+    ${course.limitedSeats ? `<span class="bg-orange-400 text-white px-2 py-1 rounded text-xs">Limited Seats</span>` : ''}
+    ${course.offer ? `<span class="bg-green-500 text-white px-2 py-1 rounded text-xs">${course.offer}</span>` : ''}
+</div>
+                            </div>
+                            <h3 class="text-lg font-semibold mt-4">${course.title}</h3>
+<p class="text-sm text-gray-600">${course.description}</p>
+     <div class="mt-4 flex justify-between gap-4 text-sm text-gray-700">
+    <ul class="space-y-2 flex-1">
+        <li class="flex items-center gap-2"><i class="fas fa-microphone-alt text-purple-700 w-5"></i>Live Classes</li>
+        <li class="flex items-center gap-2"><i class="fas fa-calendar-alt text-purple-700 w-5"></i>Daily Sessions</li>
+        <li class="flex items-center gap-2"><i class="fas fa-folder-open text-purple-700 w-5"></i>${course.projects} Projects</li>
+
+        </ul>
+    <ul class="space-y-2 flex-1">
+        <li class="flex items-center gap-2"><i class="fas fa-clock text-purple-700 w-5"></i>2 hr/day</li>
+        <li class="flex items-center gap-2"><i class="fas fa-stopwatch text-purple-700 w-5"></i>12 hr/week</li>
+   <li class="flex items-center gap-2"><i class="fas fa-hourglass-half text-purple-700 w-5"></i>${course.duration}</li>
+    </ul>
+</div>                  <div class="mt-4 flex gap-4">
+                                <button  type="button" onclick="openForm()" class="bg-purple-700 text-white px-4 py-2 rounded-lg flex-1">Enroll now</button>
+                          <a href="${course.link}" class="bg-gray-700 text-white px-4 py-2 rounded-lg flex-1 text-center block">Learn More</a>
+
+                                </div>
+                        </div>
+                    `).join(''));
+                </script>
+            </div>
+            
+
+        <!-- 📌 Styled Popup Form -->
+<div class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50 hidden" id="popupForm">
+    <div class="bg-white rounded-2xl shadow-2xl p-8 w-full max-w-md relative">
+        <!-- Close Button -->
+        <button class="absolute top-4 right-4 text-gray-500 hover:text-red-500 text-2xl" onclick="closeForm()">✖</button>
+
+        <!-- Heading -->
+        <h2 class="text-2xl font-bold text-purple-700 mb-2">Get Your Free Brochure</h2>
+        <p class="text-gray-600 mb-6">Fill in your details to receive the brochure.</p>
+
+        <!-- Form -->
+        <form id="brochureForm" class="space-y-4">
+<!-- Name -->
+<div>
+    <label for="name" class="flex block text-sm font-medium text-gray-700">Name</label>
+    <input type="text" id="name" placeholder="Enter your name" required
+      class="mt-1 w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-purple-500">
+  </div>
+  
+  <!-- Company -->
+  <div>
+    <label for="phone" class="flex text-sm font-medium text-gray-700">Phone</label>
+    <input type="text" id="phone" placeholder="Enter your phone number" required
+      class="mt-1 w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-purple-500">
+  </div>
+  
+  <!-- Email + Send OTP Button -->
+  <div class="flex gap-2 items-end">
+    <div class="flex-1">
+      <label for="email" class="flex text-sm font-medium text-gray-700">Email</label>
+      <input type="email" id="email" placeholder="Enter your email" required
+        class="mt-1 w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-purple-500">
+    </div>
+    <button type="button" onclick="sendEmailOTP()"
+      class="h-[42px] px-4 bg-purple-600 text-white rounded-lg hover:bg-purple-700">Send OTP</button>
+  </div>
+  
+  <!-- OTP + Verify Button -->
+  <div class="flex gap-2 items-end mt-2">
+    <div class="flex-1">
+      <label for="otp" class="flex block text-sm font-medium text-gray-700">Enter OTP</label>
+      <input type="text" id="otp" placeholder="Enter OTP" required
+        class="mt-1 w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-purple-500">
+    </div>
+    <button type="button" onclick="verifyEmailOTP()"
+      class="h-[42px] px-4 bg-green-600 text-white rounded-lg hover:bg-green-700">Verify</button>
+  </div>
+  
+  <!-- Download Button -->
+  <button type="button" id="downloadBtn" onclick="downloadBrochure()" disabled
+    class="w-full mt-4 bg-orange-400 text-white py-2 rounded-lg font-medium hover:bg-gray-500 transition">📄
+    Download Brochure</button>
+  
+        </form>       
+    </div>
+</div>
+        </section>
+
+        <script>
+            ScrollReveal().reveal('[data-sr]', {
+                duration: 1000,
+                origin: 'bottom',
+                distance: '50px',
+                delay: 200,
+                easing: 'ease-in-out',
+                reset: true
+            });
+        </script>
+        <script src="explore-program.js"></script>
+        <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script type="text/javascript">
+  (function(){
+    emailjs.init("Dev8GQAUrepcOTqWh"); // You'll get this from EmailJS dashboard
+  })();
+</script>
+
+
+
+    <script type="text/javascript">
+  emailjs.init("Dev8GQAUrepcOTqWh");
+
+  let generatedOTP = "";
+
+  function sendEmailOTP() {
+    const email = document.getElementById("email").value;
+    const name = document.getElementById("name").value;
+    const company = document.getElementById("company")?.value || "";
+
+    generatedOTP = Math.floor(100000 + Math.random() * 900000).toString(); // 6-digit OTP
+
+    emailjs.send("service_2okznye", "template_u4c44rh", {
+      to_email: email,
+      from_name: name,
+      company: company,
+      otp: generatedOTP
+    })
+    .then(() => {
+      alert("OTP sent to your email!");
+    }, (error) => {
+      console.error("EmailJS Error:", error);
+      alert("Failed to send OTP. Try again.");
+    });
+  }
+
+  function verifyEmailOTP() {
+    const enteredOTP = document.getElementById("otp").value;
+    if (enteredOTP === generatedOTP) {
+      alert("OTP verified successfully!");
+      document.getElementById("downloadBtn").disabled = false;
+    } else {
+      alert("Invalid OTP. Please try again.");
+    }
+  }
+
+  function downloadBrochure() {
+    // Add your file download logic here
+    alert("Brochure download started!");
+    window.open("your-brochure-link.pdf", "_blank");
+  }
+</script>
+
+<a href="https://wa.me/917050973203?text=Hi%2C%20I%20need%20more%20details%20on%20Enrollment"
+   target="_blank"
+   rel="noopener noreferrer"
+   class="fixed bottom-5 right-5 bg-[#25D366] hover:bg-[#1EBEA5] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg z-50 transition-all duration-300">
+   <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" 
+        alt="Chat on WhatsApp" 
+        class="w-7 h-7" />
+</a>
+
+</body>
+
+</html>

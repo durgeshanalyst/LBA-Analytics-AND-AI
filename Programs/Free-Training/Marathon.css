@@ -1,0 +1,388 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Navbar */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #3e0078;
+    text-align: center;
+    background: linear-gradient(to right, #ffffff, #f3e5ff);
+
+}
+/* Default Logo Styles */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: purple;
+    }
+    
+    .logo img{
+    width: 60px;
+    aspect-ratio: 1;
+    display: grid;
+    place-content: center;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    }
+    
+    .navbar a {
+    text-decoration: none; /* Removes underline */
+    }
+    
+    .logo div {
+    width: 60px;
+    aspect-ratio: 1;
+    display: grid;
+    place-content: center;
+    font-size: 1.5rem;
+    color: #fff;
+    background-color: #3e0078;
+    border-radius: 50%;
+    }
+    
+    /* Responsive Adjustments */
+    @media screen and (max-width: 1023px) {  /* Tablet */
+    .logo {
+    font-size: 1.3rem;  /* Reduce text size */
+    }
+    
+    .logo div {
+    width: 50px;  /* Smaller logo */
+    font-size: 1.2rem;
+    }
+    }
+    
+    @media screen and (max-width: 768px) {  /* Mobile */
+    .logo {
+    font-size: 1.1rem;  /* Even smaller text */
+    }
+    
+    .logo div {
+    width: 40px;  /* Even smaller logo */
+    font-size: 1rem;
+    }
+    }
+    
+    /* Hide "Try Masterclass" on Tablet & Mobile */
+    @media screen and (max-width: 1023px) {  /* Tablet & Mobile */
+    .nav-buttons .btn.primary {
+    display: none !important;
+    }
+    }
+    
+    
+    .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 15px 40px;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    }
+    
+    /* Navigation Menu - Desktop */
+    .navbar ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    }
+    
+    .navbar ul li {
+    margin: 0 15px;
+    }
+    
+    .navbar ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    font-size: 16px;
+    transition: color 0.3s ease;
+    }
+    
+    .navbar ul li a:hover {
+    color: #6200ea;
+    }
+    
+    /* Navbar Buttons */
+    .nav-buttons {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-right: 10%;
+    }
+    
+    .nav-buttons .btn {
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    background-color: #3e0078;
+    }
+    
+    .btn.primary {
+    background-color: #6200ea;
+    color: white;
+    }
+    
+    .btn:hover {
+    opacity: 0.8;
+    }
+    
+    /* Default Hamburger Menu (Hidden on Large Screens) */
+    .menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    }
+    
+    /* Custom Hamburger Menu */
+    .custom-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 24px;
+    cursor: pointer;
+    position: absolute;
+    right: 1px; /* Moves to right side */
+    top: 50%;
+    transform: translateY(-50%);
+    }
+    
+    .custom-menu .line {
+    background-color: #3e0078;
+    height: 2px;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    }
+    
+    /* Custom Menu Line Variations */
+    .short { width: 15px; }
+    .long { width: 25px; }
+    .medium { width: 30px; }
+    .longest { width: 25px; }
+    
+    /* Responsive Design for Mobile */
+    @media screen and (max-width: 1023px) {
+    .navbar {
+    padding: 10px 15px;
+    }
+    
+    /* Show custom hamburger menu only on mobile */
+    .custom-menu {
+    display: flex;
+    order: 1;
+    }
+    
+    /* Hide default menu icon */
+    .menu-icon {
+    display: none;
+    }
+    
+    .nav-buttons {
+    max-width: calc(100% - 50px);
+    justify-content: flex-end;
+    flex-shrink: 1;
+    }
+    
+    .nav-buttons .btn {
+    font-size: 12px;
+    padding: 5px 8px;
+    max-width: 120px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    }
+    
+    /* Mobile Navigation Menu */
+    .navbar ul {
+    display: none; /* Initially hidden */
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    }
+    
+    .navbar ul li {
+    margin: 8px 0;
+    }
+    
+    /* Show menu when toggled */
+    .navbar ul.show-menu {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+    }
+    }
+    
+    
+    /* Menu Active State */
+    .navbar ul.show-menu {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+    }
+/* Programs Dropdown start*/
+/* Style for dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Hide iframe by default */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 60px; /* Adjust this to place it below the navbar */
+    left: 250px;
+    transform: translateX(-50%); /* Center it */
+    width: 1500px; /* Adjust width as needed */
+    height: 470px; /* Adjust height as needed */
+    background: white;
+    border: 2px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+}
+
+/* Show iframe when hovering on Programs */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Style the iframe */
+.dropdown-content iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+@media (max-width: 768px) { /* Adjust breakpoint as needed */
+    #nav-menu .dropdown {
+        display: none;
+    }
+}
+
+.section {
+    padding: 60px 20px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+h1, h2, h3 {
+    color: #3e0078;
+}
+
+.cta-buttons {
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 12px 25px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.primary {
+    background-color: #3e0078;
+    color: #fff;
+}
+
+.secondary {
+    background-color: #fff;
+    color: #3e0078;
+    border: 2px solid #3e0078;
+}
+
+.grid.two-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.icons-list {
+    list-style: none;
+    padding: 0;
+}
+
+.icons-list li {
+    margin-bottom: 10px;
+}
+
+.mentor-profile {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.mentor-profile img {
+    width: 120px;
+    border-radius: 12px;
+}
+
+form input, form select {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+}
+
+.faq-item h3 {
+    margin-bottom: 10px;
+    color: #3e0078;
+}
+
+footer {
+    background-color: #f9f9f9;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.social-links a {
+    margin: 0 10px;
+    color: #3e0078;
+    text-decoration: none;
+}

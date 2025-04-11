@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Test EmailJS OTP</title>
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script>
+    (function(){
+      emailjs.init("Dev8GQAUrepcOTqWh"); // Replace with your public key
+    })();
+  </script>
+</head>
+<body>
+  <form>
+    <input type="text" id="name" placeholder="Name" required><br><br>
+    <input type="text" id="company" placeholder="Company (optional)"><br><br>
+    <input type="email" id="email" placeholder="Email" required><br><br>
+    <button type="button" onclick="sendEmailOTP()">Send OTP</button><br><br>
+
+    <input type="text" id="otp" placeholder="Enter OTP" required><br><br>
+    <button type="button" onclick="verifyEmailOTP()">Verify</button><br><br>
+
+    <button type="button" id="downloadBtn" onclick="downloadBrochure()" disabled>Download Brochure</button>
+  </form>
+
+  <script>
+    let generatedOTP = "";
+
+    function sendEmailOTP() {
+      const email = document.getElementById("email").value;
+      const name = document.getElementById("name").value;
+      const company = document.getElementById("company").value;
+
+      generatedOTP = Math.floor(100000 + Math.random() * 900000).toString();
+
+      emailjs.send("service_2okznye", "template_u4c44rh", {
+        to_email: email,
+        from_name: name,
+        company: company,
+        otp: generatedOTP
+      })
+      .then(() => {
+        alert("OTP sent to your email!");
+      }, (error) => {
+        console.error("EmailJS Error:", error);
+        alert("Failed to send OTP. Check the console for details.");
+      });
+    }
+
+    function verifyEmailOTP() {
+      const enteredOTP = document.getElementById("otp").value;
+      if (enteredOTP === generatedOTP) {
+        alert("OTP verified!");
+        document.getElementById("downloadBtn").disabled = false;
+      } else {
+        alert("Incorrect OTP.");
+      }
+    }
+
+    function downloadBrochure() {
+      alert("Your brochure would download now.");
+      window.open("https://example.com/brochure.pdf", "_blank");
+    }
+  </script>
+</body>
+</html>

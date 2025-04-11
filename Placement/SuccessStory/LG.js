@@ -121,3 +121,10 @@ document.addEventListener("click", function (event) {
         });
     }
 });
+
+
+// Learning section
+
+document.addEventListener("DOMContentLoaded", function () {
+    console.log("Project-Based Learning page loaded.");
+});

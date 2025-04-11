@@ -1,46 +1,3 @@
-// Smooth Scroll for "Explore More" Button
-document.addEventListener("DOMContentLoaded", function () {
-    const exploreBtn = document.querySelector('.explore-btn');
-    if (exploreBtn) {
-        exploreBtn.addEventListener('click', function () {
-            window.scrollTo({
-                top: document.body.scrollHeight,
-                behavior: 'smooth'
-            });
-        });
-    }
-});
-
-// Navbar Highlight on Scroll
-window.addEventListener('scroll', function () {
-    const header = document.querySelector('header');
-    if (header) {
-        header.classList.toggle('sticky', window.scrollY > 50);
-    }
-});
-
-// Discount Click Stats Card
-document.addEventListener("DOMContentLoaded", function () {
-    const statsCard = document.querySelector(".stats-card");
-    if (statsCard) {
-        statsCard.addEventListener("click", function () {
-            window.location.href = "/Programs/Courses/EndtoEndDataAnalytics.html#unique-pricing-section";
-        });
-        statsCard.style.cursor = "pointer";
-    }
-});
-
-// Redirecting "Enroll Now" to Pricing Page
-document.addEventListener("DOMContentLoaded", function () {
-    const enrollButton = document.getElementById("nav-enroll");
-    if (enrollButton) {
-        enrollButton.addEventListener("click", function () {
-            window.location.href = "/Programs/Courses/EndtoEndDataAnalytics.html#unique-pricing-section";
-        });
-        enrollButton.style.cursor = "pointer";
-    }
-});
-
 // Program Dropdown
 document.addEventListener("DOMContentLoaded", function () {
     const dropdown = document.querySelector(".dropdown");
@@ -82,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function startCountdown() {
         const startTime = new Date("2025-03-31T00:00:00").getTime();
-        const endTime = new Date("2025-04-21T23:59:59").getTime();
+        const endTime = new Date("2025-04-10T23:59:59").getTime();
 
         function updateTimer() {
             let now = new Date().getTime();
@@ -131,7 +88,6 @@ function switchTab(tabId, element) {
     const arrowIcon = element.querySelector(".arrow-icon");
     if (arrowIcon) arrowIcon.style.display = "inline-block";
 }
-
 // Hamburger Toggle
 function toggleMenu() {
     const nav = document.querySelector("nav");
@@ -166,33 +122,34 @@ document.addEventListener("click", function (event) {
     }
 });
 
-// FAQ Toggle
-function showAnswer(index) {
-    const answer = document.getElementById(`answer-${index}`);
-    if (answer) {
-        if (answer.classList.contains("show")) {
-            answer.classList.remove("show");
-        } else {
-            document.querySelectorAll(".answer").forEach(ans => ans.classList.remove("show"));
-            answer.classList.add("show");
-        }
-    }
+
+// Form
+
+function openForm() {
+    document.getElementById("popupForm").style.display = "flex";
 }
 
-// Announcement Bar Hide & Shift Up
-document.addEventListener("DOMContentLoaded", function () {
-    const announcementBar = document.querySelector(".announcement-bar");
-    const closeBtn = document.querySelector(".close-btn");
-    const header = document.querySelector("header");
+function closeForm() {
+    document.getElementById("popupForm").style.display = "none";
+}
 
-    if (closeBtn && announcementBar && header) {
-        closeBtn.addEventListener("click", function () {
-            announcementBar.classList.add("hidden");
-            header.classList.add("shift-up");
-            
-            setTimeout(() => {
-                announcementBar.style.display = "none";
-            }, 300);
-        });
+function downloadBrochure() {
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+
+    if (!name || !email) {
+        alert("⚠️ Please enter your name and email to continue.");
+        return;
     }
-});
+
+    // Simulating brochure download (Replace 'brochure.pdf' with the actual path)
+    let link = document.createElement("a");
+    link.href = "brochure.pdf"; // Change this to your actual brochure file
+    link.download = "Brochure.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+
+    // Close the form after downloading
+    closeForm();
+}

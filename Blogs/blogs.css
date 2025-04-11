@@ -5,6 +5,7 @@
 }
 h1 {
     color: #333;
+    margin-top: auto;
 }
 .blog-grid {
     display: grid;
@@ -80,6 +81,11 @@ h1 {
     flex-wrap: wrap; /* Ensures wrapping based on screen width */
     gap: 20px;
     padding: 10px;
+}
+
+.horizontal-blog-list a{
+    text-decoration: none;
+    color: inherit; /* Inherit color from parent */
 }
 
 /* Individual Blog Cards */
